@@ -7,18 +7,22 @@
 
 {%- block main -%}
     <article class="home-section">
-      <h2>Ostatnie wpisy</h2>
+      <h2>{{ config.extra.latest_posts_title }}</h2>
       {%- set posts_section = get_section(path="posts/_index.md") %}
       <ul class="pages-list">
       {%- for post in posts_section.pages | sort(attribute="date") | reverse %}
         {%- if loop.index <= 5 %}
         <li>
           <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
-          <small><time datetime="{{ post.date }}">{{ post.date | date(format="%b %d, %Y") }}</time></small>
+          <small>
+            <time datetime="{{ post.date }}">
+              {{ post.date | date(locale=config.extra.date_locale, format=config.extra.date_format_home) }}
+            </time>
+          </small>
         </li>
         {%- endif %}
       {%- endfor %}
-        <li><a href="{{ posts_section.permalink | safe }}">Zobacz wszystkie →</a></li>
+        <li><a href="{{ posts_section.permalink | safe }}">{{ config.extra.view_all_text }}</a></li>
       </ul>
     </article>
 {%- endblock %}
