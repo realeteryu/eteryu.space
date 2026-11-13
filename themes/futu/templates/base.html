@@ -46,8 +46,8 @@
   <style>
     /* Stylizacja inline code (backticki) z wymuszeniem priorytetu */
     main code, article code, p code, li code {
-      color: #d63384 !important; /* Malinowy róż */
-      background-color: rgba(214, 51, 132, 0.1) !important; /* Delikatne różowe tło */
+      color: #d63384 !important;
+      background-color: rgba(214, 51, 132, 0.1) !important;
       padding: 0.15em 0.35em !important;
       border-radius: 4px !important;
       font-size: 0.9em !important;
@@ -58,7 +58,7 @@
     /* Lepszy wygląd w trybie ciemnym (Dark Mode) */
     @media (prefers-color-scheme: dark) {
       main code, article code, p code, li code {
-        color: #ff79c6 !important; /* Jaśniejszy, neonowy róż */
+        color: #ff79c6 !important;
         background-color: rgba(255, 121, 198, 0.15) !important;
       }
     }
@@ -66,8 +66,8 @@
     /* Globalne, eleganckie podkreślenie dla wszystkich linków (np. stopka, treść) */
     a {
       text-decoration: underline;
-      text-underline-offset: 3px; /* Delikatny odstęp linii od tekstu */
-      text-decoration-thickness: 1px; /* Cieńsza linia, by nie przytłaczała */
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
     }
 
     /* WYJĄTKI: Wyłączamy podkreślenie dla nagłówka, nawigacji, listy wpisów i paginacji */
@@ -78,9 +78,17 @@
       text-decoration: none !important;
     }
 
-    /* Podkreślenie mocniejszym kolorem przy najechaniu myszką (na komputerze) */
     a:hover {
       text-decoration-thickness: 2px;
+    }
+
+    /* --- POPRAWKI STOPKI --- */
+    footer p {
+      margin: 0.2rem 0; /* Zmniejsza odstępy między liniami tekstu w stopce */
+      line-height: 1.4;
+    }
+    footer > div:first-child {
+      margin-bottom: 1rem !important; /* Zmniejsza odstęp przed linkami społecznosciowymi */
     }
   </style>
 </head>
