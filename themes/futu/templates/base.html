@@ -62,6 +62,23 @@
         background-color: rgba(255, 121, 198, 0.15) !important;
       }
     }
+
+    /* Globalne, eleganckie podkreślenie dla wszystkich linków */
+    a {
+      text-decoration: underline;
+      text-underline-offset: 3px; /* Delikatny odstęp linii od tekstu */
+      text-decoration-thickness: 1px; /* Cieńsza linia, by nie przytłaczała */
+    }
+
+    /* Wyjątek: Nie podkreślamy tytułu strony w nagłówku (logo) */
+    .header__verification {
+      text-decoration: none !important;
+    }
+
+    /* Podkreślenie mocniejszym kolorem przy najechaniu myszką (na komputerze) */
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
   </style>
 </head>
 
@@ -103,9 +120,11 @@
     </div>
     
     <div style="display: flex; gap: 0.8rem; justify-content: center; align-items: center; margin-bottom: 1rem;">
-      <a href="{{ get_url(path='index.xml') }}" title="RSS" style="text-decoration: none;">RSS</a>
+      <a href="{{ get_url(path='index.xml') }}" title="RSS">RSS</a>
       <span style="opacity: 0.5;">•</span>
-      <a href="{{ config.extra.mastodon.instanceUrl }}/{{ config.extra.mastodon.profileName }}" title="Mastodon" style="text-decoration: none;">Mastodon</a>
+      <a href="https://distrust.pl" target="_blank" rel="noopener" title="distrust.pl">distrust.pl</a>
+      <span style="opacity: 0.5;">•</span>
+      <a href="{{ config.extra.mastodon.instanceUrl }}/{{ config.extra.mastodon.profileName }}" title="Mastodon">Mastodon</a>
     </div>
     {%- endblock %}
   </footer>
