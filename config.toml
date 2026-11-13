@@ -23,7 +23,7 @@ bottom_footnotes = true
 
 # poprawiona składnia podświetlania kodu dla nowszych wersji zoli
 [markdown.highlighting]
-theme = "inspired-github"
+theme = "github-light"
 
 # tutaj umieść swoje własne zmienne
 [extra]
