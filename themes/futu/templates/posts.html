@@ -9,7 +9,7 @@
     {%- for post in groups[year] | sort(attribute="date") | reverse %}
       <li>
         <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
-        <small><time datetime="{{ post.date }}">{{ post.date | format="%b %d" }}</time></small>
+        <small><time datetime="{{ post.date }}">{{ post.date | date(format="%b %d") }}</time></small>
       </li>
     {% endfor %}
     </ul>
