@@ -44,6 +44,44 @@
   {%- block custom_meta %}{% endblock %}
 
   <style>
+    /* self-hostowane czcionki */
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('{{ get_url(path="fonts/roboto_5.2.10_latin-wght-normal.woff2") }}') format('woff2');
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('{{ get_url(path="fonts/roboto_5.2.10_latin-ext-wght-normal.woff2") }}') format('woff2');
+    }
+    @font-face {
+      font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('{{ get_url(path="fonts/roboto-mono_5.2.9_latin-wght-normal.woff2") }}') format('woff2');
+    }
+    @font-face {
+      font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('{{ get_url(path="fonts/roboto-mono_5.3.0_latin-ext-wght-normal.woff2") }}') format('woff2');
+    }
+
+    /* nadpisanie czcionek motywu */
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif !important;
+    }
+    code, pre, kbd, samp, .header__verification {
+      font-family: 'Roboto Mono', monospace !important;
+    }
+
     /* stylizacja inline code */
     main code, article code, p code, li code {
       color: #d63384 !important;
@@ -51,7 +89,7 @@
       padding: 0.15em 0.35em !important;
       border-radius: 4px !important;
       font-size: 0.9em !important;
-      font-family: monospace !important;
+      font-family: 'Roboto Mono', monospace !important;
       font-weight: 500 !important;
     }
 
