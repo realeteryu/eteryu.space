@@ -1,6 +1,6 @@
 +++
 title = "O mnie"
-template = "page.html"
+template = "section.html"
 +++
 
 Cześć! Jestem Eteryu. Na co dzień interesuję się cyfrową higieną, prywatnością i bezpieczeństwem w sieci. 
