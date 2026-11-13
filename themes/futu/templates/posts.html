@@ -23,27 +23,29 @@
 
     {# --- NAWIGACJA PAGINACJI --- #}
     {% if paginator.number_pagers > 1 %}
-    <nav class="pagination" style="display: flex; justify-content: center; align-items: center; gap: 0.8rem; margin-top: 3rem; margin-bottom: 2rem; font-family: monospace;">
+    <nav class="pagination" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 3rem; margin-bottom: 2rem; font-family: monospace; font-size: 0.95rem;">
       
       {# Przycisk Poprzednia strona #}
       {% if paginator.previous %}
-        <a href="{{ paginator.previous }}" style="text-decoration: none; opacity: 0.7;">&laquo; Poprzednia</a>
+        <a href="{{ paginator.previous }}" style="text-decoration: none; color: inherit; font-weight: bold;">&laquo; Poprzednia</a>
       {% else %}
         <span style="opacity: 0.3;">&laquo; Poprzednia</span>
       {% endif %}
 
       {# Numeracja stron (1, 2, 3...) #}
+      <div style="display: flex; gap: 0.6rem; align-items: center;">
       {% for i in range(start=1, end=paginator.number_pagers + 1) %}
         {% if i == paginator.current_index %}
-          <span style="font-weight: bold; color: #d63384; padding: 0.2rem 0.5rem; border-radius: 4px; background-color: rgba(214, 51, 132, 0.1);">{{ i }}</span>
+          <span style="font-weight: bold; color: #ff79c6; border-bottom: 2px solid #ff79c6; padding: 0 0.2rem;">{{ i }}</span>
         {% else %}
-          <a href="{{ paginator.base_url }}{{ i }}" style="text-decoration: none; padding: 0.2rem 0.5rem;">{{ i }}</a>
+          <a href="{{ paginator.base_url }}{{ i }}" style="text-decoration: none; color: inherit; opacity: 0.5; padding: 0 0.2rem;">{{ i }}</a>
         {% endif %}
       {% endfor %}
+      </div>
 
       {# Przycisk Następna strona #}
       {% if paginator.next %}
-        <a href="{{ paginator.next }}" style="text-decoration: none; opacity: 0.7;">Następna &raquo;</a>
+        <a href="{{ paginator.next }}" style="text-decoration: none; color: inherit; font-weight: bold;">Następna &raquo;</a>
       {% else %}
         <span style="opacity: 0.3;">Następna &raquo;</span>
       {% endif %}
