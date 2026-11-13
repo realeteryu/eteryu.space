@@ -7,7 +7,7 @@
 
 {%- block main -%}
     <article class="home-section">
-      <h2>Latest Posts</h2>
+      <h2>Ostatnie wpisy</h2>
       {%- set posts_section = get_section(path="posts/_index.md") %}
       <ul class="pages-list">
       {%- for post in posts_section.pages | sort(attribute="date") | reverse %}
@@ -18,7 +18,7 @@
         </li>
         {%- endif %}
       {%- endfor %}
-        <li><a href="{{ posts_section.permalink | safe }}">View All →</a></li>
+        <li><a href="{{ posts_section.permalink | safe }}">Zobacz wszystkie →</a></li>
       </ul>
     </article>
 {%- endblock %}
