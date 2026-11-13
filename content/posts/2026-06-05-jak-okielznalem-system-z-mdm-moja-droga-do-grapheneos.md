@@ -2,6 +2,9 @@
 title = "Jak okiełznałem system z MDM. Moja droga do GrapheneOS"
 date = 2026-06-05
 description = "Historia o tym, jak ukryty profil MDM w telefonie z drugiej ręki zmusił mnie do natychmiastowej reakcji i ewakuacji cyfrowej tożsamości, a GrapheneOS stał się moim nowym, bezpiecznym domem."
+
+[extra]
+toc = true
 +++
 
 W świecie cyberbezpieczeństwa często rozmawiamy o „modelach zagrożeń” w sposób czysto teoretyczny. Sam byłem w tym miejscu, budując swój poprzedni setup na iPhonie 17 Pro. Wszystko zmieniło się w ułamku sekundy, gdy teoria zderzyła się z brutalną rzeczywistością.
