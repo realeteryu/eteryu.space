@@ -2,6 +2,9 @@
 title = "Ewolucja zaufania. Dlaczego czas F-Droida mija"
 date = 2026-06-07
 description = "Dlaczego F-Droid to już przeżytek na GrapheneOS? Analiza przestarzałych mechanizmów bezpieczeństwa i nowoczesne podejście do dystrybucji aplikacji FOSS."
+
+[extra]
+toc = true
 +++
 
 F-Droid w środowisku prywatnościowym urósł do rangi nietykalnego świętego. Niestety, w świecie cyberbezpieczeństwa ideologia to za mało. Podczas gdy Android ewoluował, F-Droid utknął w przeszłości, stając się dziś jednym z najsłabszych ogniw na bezpiecznych systemach takich jak GrapheneOS.
