@@ -1,8 +1,8 @@
 # adres url, pod którym będzie budowana strona
 base_url = "https://realeteryu.github.io/eteryu.space/"
-title = "eteryu.space"
-description = "Mój osobisty blog"
-author = "eteryu"
+title = "Eteryu.space"
+description = "Blog o cyfrowej higienie, prywatności i bezpieczeństwie"
+author = "Eteryu"
 theme = "futu"
 
 # automatyczna kompilacja plików sass
@@ -27,6 +27,9 @@ theme = "github-light"
 
 # tutaj umieść swoje własne zmienne
 [extra]
+# poprawia wersję wyświetlaną w stopce
+zola_version = "0.23.6"
+
 # przykładowa nawigacja
 [[extra.nav]]
 name = "Strona główna"
