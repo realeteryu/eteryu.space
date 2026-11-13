@@ -42,6 +42,27 @@
   <meta name="google-site-verification" content="{{ config.extra.googleVerification }}" />
   {%- endif %}
   {%- block custom_meta %}{% endblock %}
+
+  <style>
+    /* Stylizacja inline code (backticki) */
+    :not(pre) > code {
+      color: #d63384; /* Malinowy róż w trybie jasnym */
+      background-color: rgba(214, 51, 132, 0.1); /* Delikatne różowe tło */
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: monospace;
+      font-weight: 500;
+    }
+
+    /* Lepszy wygląd w trybie ciemnym (Dark Mode) */
+    @media (prefers-color-scheme: dark) {
+      :not(pre) > code {
+        color: #ff79c6; /* Jaśniejszy, neonowy róż dla lepszego kontrastu w ciemności */
+        background-color: rgba(255, 121, 198, 0.15);
+      }
+    }
+  </style>
 </head>
 
 <body>
