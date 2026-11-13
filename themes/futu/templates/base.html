@@ -44,7 +44,7 @@
   {%- block custom_meta %}{% endblock %}
 
   <style>
-    /* Stylizacja inline code (backticki) z wymuszeniem priorytetu */
+    /* stylizacja inline code */
     main code, article code, p code, li code {
       color: #d63384 !important;
       background-color: rgba(214, 51, 132, 0.1) !important;
@@ -55,7 +55,7 @@
       font-weight: 500 !important;
     }
 
-    /* Lepszy wygląd w trybie ciemnym (Dark Mode) */
+    /* tryb ciemny */
     @media (prefers-color-scheme: dark) {
       main code, article code, p code, li code {
         color: #ff79c6 !important;
@@ -63,14 +63,14 @@
       }
     }
 
-    /* Globalne, eleganckie podkreślenie dla wszystkich linków (np. stopka, treść) */
+    /* globalne podkreslenie linkow */
     a {
       text-decoration: underline;
       text-underline-offset: 3px;
       text-decoration-thickness: 1px;
     }
 
-    /* WYJĄTKI: Wyłączamy podkreślenie dla nagłówka, nawigacji, listy wpisów i paginacji */
+    /* wyjatki dla podkreslenia (naglowek, nawigacja, lista, paginacja) */
     .header__verification,
     nav a,
     .pages-list a,
@@ -82,13 +82,13 @@
       text-decoration-thickness: 2px;
     }
 
-    /* --- POPRAWKI STOPKI --- */
+    /* poprawki stopki */
     footer p {
-      margin: 0.2rem 0; /* Zmniejsza odstępy między liniami tekstu w stopce */
-      line-height: 1.4;
+      margin: 0.4rem 0;
+      line-height: 1.5;
     }
     footer > div:first-child {
-      margin-bottom: 1rem !important; /* Zmniejsza odstęp przed linkami społecznosciowymi */
+      margin-bottom: 1.5rem !important;
     }
   </style>
 </head>
@@ -124,7 +124,7 @@
   
   <footer>
     {%- block footer -%}
-    <div style="margin-bottom: 1rem;">
+    <div style="margin-bottom: 1.5rem;">
       <p>Copyright &copy; {{ now() | date(format="%Y") }} {{ config.author }} &middot; {{ config.description }}</p>
       <p>Treść na licencji <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></p>
       <p><a href="mailto:{{ config.extra.contact_email }}">{{ config.extra.contact_email }}</a></p>
