@@ -19,12 +19,12 @@
       <header>
         <h1>{{ title }}</h1>
         <span>
-          <br><time datetime="{{ page.date }}">{{ page.date | date(format="%b %d, %Y") }}</time>
+          <br><time datetime="{{ page.date }}">{{ page.date | date(locale=config.extra.date_locale, format=config.extra.date_format_home) }}</time>
         </span>
       </header>
       {%- if page.extra.toc and page.toc -%}
       <details id=TableOfContentsWrapper>
-        <summary>Table of Contents</summary>
+        <summary>Spis treści</summary>
         <nav id=TableOfContents>
           <ul>
             {% for h1 in page.toc -%}
@@ -58,7 +58,7 @@
             data-emit-metadata="0"
             data-input-position="bottom"
             data-theme="preferred_color_scheme"
-            data-lang="en"
+            data-lang="pl"
             crossorigin="anonymous"
             async>
       </script>
