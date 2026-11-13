@@ -44,22 +44,22 @@
   {%- block custom_meta %}{% endblock %}
 
   <style>
-    /* Stylizacja inline code (backticki) */
-    :not(pre) > code {
-      color: #d63384; /* Malinowy róż w trybie jasnym */
-      background-color: rgba(214, 51, 132, 0.1); /* Delikatne różowe tło */
-      padding: 0.15em 0.35em;
-      border-radius: 4px;
-      font-size: 0.9em;
-      font-family: monospace;
-      font-weight: 500;
+    /* Stylizacja inline code (backticki) z wymuszeniem priorytetu */
+    main code, article code, p code, li code {
+      color: #d63384 !important; /* Malinowy róż */
+      background-color: rgba(214, 51, 132, 0.1) !important; /* Delikatne różowe tło */
+      padding: 0.15em 0.35em !important;
+      border-radius: 4px !important;
+      font-size: 0.9em !important;
+      font-family: monospace !important;
+      font-weight: 500 !important;
     }
 
     /* Lepszy wygląd w trybie ciemnym (Dark Mode) */
     @media (prefers-color-scheme: dark) {
-      :not(pre) > code {
-        color: #ff79c6; /* Jaśniejszy, neonowy róż dla lepszego kontrastu w ciemności */
-        background-color: rgba(255, 121, 198, 0.15);
+      main code, article code, p code, li code {
+        color: #ff79c6 !important; /* Jaśniejszy, neonowy róż */
+        background-color: rgba(255, 121, 198, 0.15) !important;
       }
     }
   </style>
