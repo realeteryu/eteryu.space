@@ -30,6 +30,15 @@ theme = "github-light"
 # poprawia wersję wyświetlaną w stopce
 zola_version = "0.23.6"
 
+# teksty interfejsu
+latest_posts_title = "Ostatnie wpisy"
+view_all_text = "Zobacz wszystkie →"
+
+# formaty daty
+date_locale = "pl_PL"
+date_format_home = "%d %B %Y"
+date_format_posts = "%d %B"
+
 # przykładowa nawigacja
 [[extra.nav]]
 name = "Strona główna"
