@@ -2,7 +2,9 @@
 
 {%- block main -%}
     <h1>{{ section.title }}</h1>
-    {% set groups = section.pages | group_by(attribute="year") %}
+    
+    {# Używamy paginator.pages zamiast section.pages #}
+    {% set groups = paginator.pages | group_by(attribute="year") %}
     {% for year in groups | keys | sort | reverse -%}
     <h2>{{ year }}</h2>
     <ul class="pages-list">
@@ -18,4 +20,36 @@
     {% endfor %}
     </ul>
     {%- endfor %}
+
+    {# --- NAWIGACJA PAGINACJI --- #}
+    {% if paginator.number_pagers > 1 %}
+    <nav class="pagination" style="display: flex; justify-content: center; align-items: center; gap: 0.8rem; margin-top: 3rem; margin-bottom: 2rem; font-family: monospace;">
+      
+      {# Przycisk Poprzednia strona #}
+      {% if paginator.previous %}
+        <a href="{{ paginator.previous }}" style="text-decoration: none; opacity: 0.7;">&laquo; Poprzednia</a>
+      {% else %}
+        <span style="opacity: 0.3;">&laquo; Poprzednia</span>
+      {% endif %}
+
+      {# Numeracja stron (1, 2, 3...) #}
+      {% for i in range(start=1, end=paginator.number_pagers + 1) %}
+        {% if i == paginator.current_index %}
+          <span style="font-weight: bold; color: #d63384; padding: 0.2rem 0.5rem; border-radius: 4px; background-color: rgba(214, 51, 132, 0.1);">{{ i }}</span>
+        {% else %}
+          <a href="{{ paginator.base_url }}{{ i }}" style="text-decoration: none; padding: 0.2rem 0.5rem;">{{ i }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {# Przycisk Następna strona #}
+      {% if paginator.next %}
+        <a href="{{ paginator.next }}" style="text-decoration: none; opacity: 0.7;">Następna &raquo;</a>
+      {% else %}
+        <span style="opacity: 0.3;">Następna &raquo;</span>
+      {% endif %}
+
+    </nav>
+    {% endif %}
+    {# --- KONIEC NAWIGACJI --- #}
+
 {%- endblock main %}
