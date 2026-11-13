@@ -1,0 +1,24 @@
+# Pamiętaj o ukośniku na końcu i zmianie "twoj-nick" na swoją nazwę użytkownika!
+base_url = "https://realeteryu.github.io/eteryu.space/"
+title = "eteryu.space"
+description = "Mój osobisty blog"
+theme = "futu"
+
+compile_sass = true
+generate_feeds = true
+feed_filenames = ["index.xml"]
+
+[markdown]
+highlight_code = true
+highlight_theme = "inspired-github"
+render_emoji = true
+bottom_footnotes = true
+
+[extra]
+[[extra.nav]]
+name = "Strona główna"
+url = "@/_index.md"
+
+[[extra.nav]]
+name = "Wpisy"
+url = "@/posts/_index.md"
