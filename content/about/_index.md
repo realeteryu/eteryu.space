@@ -3,6 +3,14 @@ title = "O mnie"
 template = "section.html"
 +++
 
-Cześć! Jestem Eteryu. Na co dzień interesuję się cyfrową higieną, prywatnością i bezpieczeństwem w sieci. 
+Inżynier i praktyk bezpieczeństwa. Interesuje mnie suwerenność cyfrowa, FOSS oraz to, jak działają systemy – nie tylko jak wyglądają w broszurach.
 
-To jest moje miejsce w internecie, w którym dzielę się przemyśleniami i poradami.
+Moje podejście opieram na weryfikacji, a nie domyślnym zaufaniu. Stąd motto: **„Zdrowy brak zaufania nie jest paranoją — jest rozsądkiem”**.
+
+## Środowisko pracy
+
+Cały blog, kod i konfigurację tworzę w 100% na smartfonie z GrapheneOS. To nie eksperyment – to mój standardowy warsztat.
+
+## Kontakt
+
+Mastodon: [@Eteryu@101010.pl](https://101010.pl/@Eteryu)
