@@ -1,20 +1,33 @@
-# Pamiętaj o ukośniku na końcu i zmianie "twoj-nick" na swoją nazwę użytkownika!
+# adres url, pod którym będzie budowana strona
 base_url = "https://realeteryu.github.io/eteryu.space/"
 title = "eteryu.space"
 description = "Mój osobisty blog"
+author = "eteryu"
 theme = "futu"
 
+# automatyczna kompilacja plików sass
 compile_sass = true
+# generowanie kanałów rss/atom
 generate_feeds = true
 feed_filenames = ["index.xml"]
 
+# zachowuje daty w adresach url (tak jak w oryginalnym motywie)
+[slugify]
+paths_keep_dates = true
+
 [markdown]
-highlight_code = true
-highlight_theme = "inspired-github"
+# renderowanie emoji w treści
 render_emoji = true
+# przypisy na dole strony
 bottom_footnotes = true
 
+# poprawiona składnia podświetlania kodu dla nowszych wersji zoli
+[markdown.highlighting]
+theme = "inspired-github"
+
+# tutaj umieść swoje własne zmienne
 [extra]
+# przykładowa nawigacja
 [[extra.nav]]
 name = "Strona główna"
 url = "@/_index.md"
