@@ -1,7 +1,7 @@
 {% extends "section.html" %}
 
 {%- block main -%}
-    <h1>Posts</h1>
+    <h1>{{ section.title }}</h1>
     {% set groups = section.pages | group_by(attribute="year") %}
     {% for year in groups | keys | sort | reverse -%}
     <h2>{{ year }}</h2>
@@ -9,7 +9,7 @@
     {%- for post in groups[year] | sort(attribute="date") | reverse %}
       <li>
         <a href="{{ post.permalink | safe }}">{{ post.title }}</a>
-        <small><time datetime="{{ post.date }}">{{ post.date | date(format="%b %d") }}</time></small>
+        <small><time datetime="{{ post.date }}">{{ post.date | format="%b %d" }}</time></small>
       </li>
     {% endfor %}
     </ul>
