@@ -30,6 +30,9 @@ theme = "github-light"
 # poprawia wersję wyświetlaną w stopce
 zola_version = "0.23.6"
 
+# kontakt
+contact_email = "kontakt@distrust.pl"
+
 # teksty interfejsu
 latest_posts_title = "Ostatnie wpisy"
 view_all_text = "Zobacz wszystkie →"
