@@ -63,15 +63,18 @@
       }
     }
 
-    /* Globalne, eleganckie podkreślenie dla wszystkich linków */
+    /* Globalne, eleganckie podkreślenie dla wszystkich linków (np. stopka, treść) */
     a {
       text-decoration: underline;
       text-underline-offset: 3px; /* Delikatny odstęp linii od tekstu */
       text-decoration-thickness: 1px; /* Cieńsza linia, by nie przytłaczała */
     }
 
-    /* Wyjątek: Nie podkreślamy tytułu strony w nagłówku (logo) */
-    .header__verification {
+    /* WYJĄTKI: Wyłączamy podkreślenie dla nagłówka, nawigacji, listy wpisów i paginacji */
+    .header__verification,
+    nav a,
+    .pages-list a,
+    .pagination a {
       text-decoration: none !important;
     }
 
