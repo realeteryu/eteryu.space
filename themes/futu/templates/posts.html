@@ -36,7 +36,8 @@
       <div style="display: flex; gap: 0.6rem; align-items: center;">
       {% for i in range(start=1, end=paginator.number_pagers + 1) %}
         {% if i == paginator.current_index %}
-          <span style="font-weight: bold; color: #ff79c6; border-bottom: 2px solid #ff79c6; padding: 0 0.2rem;">{{ i }}</span>
+          {# Aktywna strona: niebieskie podkreślenie i pogrubienie #}
+          <span style="font-weight: bold; color: #8db4ff; border-bottom: 2px solid #8db4ff; padding: 0 0.2rem;">{{ i }}</span>
         {% else %}
           <a href="{{ paginator.base_url }}{{ i }}" style="text-decoration: none; color: inherit; opacity: 0.5; padding: 0 0.2rem;">{{ i }}</a>
         {% endif %}
