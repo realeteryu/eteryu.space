@@ -1,5 +1,5 @@
 # adres url, pod którym będzie budowana strona
-base_url = "https://realeteryu.github.io/eteryu.space/"
+base_url = "https://eteryu.space/"
 title = "Eteryu.space"
 description = "Blog o cyfrowej higienie, prywatności i bezpieczeństwie"
 author = "Eteryu"
