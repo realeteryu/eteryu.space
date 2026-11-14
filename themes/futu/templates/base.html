@@ -114,31 +114,43 @@
       margin: 0 auto;
     }
 
-    /* optymalizacja typografii tekstu ciaglego */
-    main p, main li {
-      font-size: 1.05rem !important; /* delikatne zmniejszenie */
-      line-height: 1.7 !important; /* wieksza interliniowa */
+    /* optymalizacja typografii tekstu ciaglego (tylko akapity!) */
+    main p {
+      font-size: 1.05rem !important; 
+      line-height: 1.7 !important;
     }
 
     /* hierarchia i optymalizacja naglowkow */
     h1 {
-      font-size: 2.1rem !important;
-      line-height: 1.25 !important;
-      margin-bottom: 1.5rem !important;
+      font-size: 1.9rem !important;
+      line-height: 1.2 !important;
+      margin-bottom: 1.2rem !important;
     }
     
     h2 {
-      font-size: 1.6rem !important;
-      margin-top: 3rem !important;
+      font-size: 1.4rem !important;
+      margin-top: 2.5rem !important;
       margin-bottom: 1rem !important;
       line-height: 1.3 !important;
     }
     
     h3 {
-      font-size: 1.3rem !important;
-      margin-top: 2rem !important;
-      margin-bottom: 0.8rem !important;
+      font-size: 1.15rem !important;
+      margin-top: 1.8rem !important;
+      margin-bottom: 0.6rem !important;
       line-height: 1.4 !important;
+    }
+
+    /* poprawka dla przypisow (zeby nie byly gigantyczne) */
+    .footnotes, .footnotes li, .footnotes p {
+      font-size: 0.85rem !important;
+      line-height: 1.5 !important;
+      opacity: 0.8;
+    }
+    .footnotes h2 {
+      font-size: 1.2rem !important;
+      margin-top: 3rem !important;
+      margin-bottom: 1rem !important;
     }
   </style>
 </head>
