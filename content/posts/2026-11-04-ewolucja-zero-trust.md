@@ -61,6 +61,8 @@ Dla mnie, jako autora bloga o cyfrowej higienie, Zero Trust to przede wszystkim 
 
 Nie musisz być korporacją, żeby myśleć jak Zero Trust. Wystarczy, że zaczniesz od siebie.
 
+---
+
 ## Przypisy
 
 [^1]: Kindervag, J. (2010). *No More Chewy Centers: Introducing the Zero Trust Model of Information Security*. Forrester Research.
