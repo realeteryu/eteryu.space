@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block main %}
+<article>
+  <h1>{{ section.title }}</h1>
+  
+  <blockquote>
+    <strong>Filozofia katalogu</strong><br>
+    To nie jest lista aplikacji idealnych, bo takie nie istnieją. To <strong>kuratorski wybór narzędzi</strong> opartych na architekturze Zero Trust, których działanie i kompromisy zostały zweryfikowane w praktyce.<br><br>
+    Zgodnie z filozofią <em>distrust</em>, zamiast ukrywać wady, pokazujemy je wprost. Jeśli aplikacja zbiera metadane lub korzysta z zewnętrznych bibliotek, informacja o tym znajduje się w jej opisie. Świadome bezpieczeństwo polega na znajomości ograniczeń narzędzi i dopasowaniu ich do własnego modelu zagrożeń, a nie na ślepej pogoni za iluzją 100% prywatności.
+  </blockquote>
+
+  <h2>Zarządzanie aplikacjami i weryfikacja</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Obtainium</h3><hr>
+      <p>Pobiera i aktualizuje aplikacje bezpośrednio z ich oficjalnych repozytoriów (GitHub, GitLab itp.). Całkowicie omija sklepy pośredniczące, dając Ci pełną kontrolę nad źródłem kodu.</p>
+      <a href="https://github.com/ImranR98/Obtainium" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Accrescent</h3><hr>
+      <p>Nowoczesny, utwardzony sklep z aplikacjami (dostępny m.in. na GrapheneOS) wymuszający rygorystyczne sprawdzanie podpisów cyfrowych i szyfrowane metadane.</p>
+      <a href="https://github.com/accrescent/accrescent" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>AppVerifier (BG)</h3><hr>
+      <p>Utwardzony fork narzędzia do weryfikacji podpisów APK. Pozwala sprawdzić, czy pobrany plik rzeczywiście pochodzi od zaufanego dewelopera, eliminując ryzyko instalacji zmodyfikowanej paczki.</p>
+      <a href="https://codeberg.org/unwanted9855/AppVerifierBG" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Verified Apps</h3><hr>
+      <p>Kuratorowana przez społeczność Privacy Guides baza zaufanych sygnatur aplikacji. Uzupełnia Obtainium i AppVerifier o gotowy zestaw sprawdzonych podpisów.</p>
+      <a href="https://github.com/privacyguides/verified-apps-android" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Przeglądarki internetowe</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Vanadium</h3><hr>
+      <p>Domyślna, utwardzona przeglądarka systemu GrapheneOS. Skupiona na izolacji piaskownicy i rygorystycznej ochronie pamięci, zapewnia najniższą powierzchnię ataku.</p>
+      <a href="https://github.com/GrapheneOS/Vanadium" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Brave</h3><hr>
+      <p>Szybka przeglądarka z domyślnie wbudowaną ochroną przed trackerami. Oferuje świetny balans między wygodą a prywatnością dla codziennego użytkowania.</p>
+      <div class="alert warning"><strong>Kontrowersje:</strong> Brave ma historię kontrowersji, m.in. związanych z linkami afiliacyjnymi (2020) oraz innymi incydentami dotyczącymi prywatności. Mimo to pozostaje jednym z najskuteczniejszych narzędzi do blokowania trackerów.</div>
+      <a href="https://github.com/brave/brave-browser" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Sieć, DNS i VPN</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>WG Tunnel</h3><hr>
+      <p>Zaawansowany klient WireGuard dla Androida. Oferuje automatyczne tunelowanie, wiele profili oraz reguły split tunneling. Pozwala na wpięcie własnego szyfrowanego DNS (DoH).</p>
+      <a href="https://github.com/wgtunnel/android" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Quad9</h3><hr>
+      <p>Niezależny, bezpieczny resolver DNS. Automatycznie blokuje złośliwe domeny bez logowania adresu IP użytkownika.</p>
+      <a href="https://quad9.net/" target="_blank" rel="noopener">➔ Przejdź do strony</a>
+    </div>
+    <div class="app-card">
+      <h3>HostuxDNS</h3><hr>
+      <p>Publiczny, w pełni open-source'owy resolver DNS (oparty na Unbound i dnsdist). Oferuje szyfrowanie DoH, DoH3, DoT i DoQ, brak kont oraz anonimowe logi (max 24h).</p>
+      <a href="https://dns.hostux.net/" target="_blank" rel="noopener">➔ Przejdź do strony</a>
+    </div>
+    <div class="app-card">
+      <h3>Mullvad VPN</h3><hr>
+      <p>Złoty standard wśród płatnych VPN. Nie wymaga adresu e-mail (losowy numer konta) i oferuje w pełni audytowaną politykę braku logów.</p>
+      <a href="https://mullvad.net/" target="_blank" rel="noopener">➔ Przejdź do strony</a>
+    </div>
+    <div class="app-card">
+      <h3>IVPN</h3><hr>
+      <p>Audytowany dostawca VPN z obsługą protokołu WireGuard i Multi-Hop. Rejestracja odbywa się bez podawania danych osobowych.</p>
+      <a href="https://www.ivpn.net/" target="_blank" rel="noopener">➔ Przejdź do strony</a>
+    </div>
+  </div>
+
+  <h2>Menedżery haseł i 2FA</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>KeePassDX</h3><hr>
+      <p>W pełni lokalny menedżer haseł. Zapewnia absolutną suwerenność danych bez polegania na zewnętrznych serwerach czy chmurze.</p>
+      <a href="https://github.com/Kunzisoft/KeePassDX" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Aegis</h3><hr>
+      <p>Szyfrowana aplikacja do generowania kodów 2FA. Działa całkowicie offline, posiada opcję bezpiecznych kopii zapasowych.</p>
+      <a href="https://github.com/beemdevelopment/Aegis" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Ente Auth</h3><hr>
+      <p>Wieloplatformowy authenticator wykorzystujący szyfrowanie end-to-end. Umożliwia bezpieczną synchronizację kodów między urządzeniami.</p>
+      <a href="https://github.com/ente/ente" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Komunikacja i poczta</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Molly</h3><hr>
+      <p>Utwardzony fork Signala. Wspiera UnifiedPush (brak zależności od usług Google/FCM) oraz oferuje dodatkowe szyfrowanie lokalnej bazy danych.</p>
+      <div class="alert warning"><strong>Brak aktualizacji od lipca 2026:</strong> Ostatnie stabilne wydanie (v8.19.2-4) ukazało się 31 lipca 2026 roku. Od tego czasu w oficjalnym Signal załatano m.in. lukę bezpieczeństwa. Molly pozostaje na te błędy podatna do czasu wchłonięcia zmian z upstreamu.</div>
+      <a href="https://github.com/mollyim/mollyim-android" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Tuta Mail</h3><hr>
+      <p>Kompleksowo szyfrowana poczta e-mail (model Zero Knowledge). W przeciwieństwie do wielu konkurentów, nie wykorzystuje bibliotek Google (Firebase) w wersji F-Droid.</p>
+      <div class="alert warning"><strong>Wybór wersji:</strong> Wersja z GitHuba łączy się z <code>firebaselogging.googleapis.com</code>. Instaluj wyłącznie wydanie z F-Droid, które jest wolne od tych zależności.</div>
+      <a href="https://tuta.com/" target="_blank" rel="noopener">➔ Przejdź do strony</a>
+    </div>
+    <div class="app-card">
+      <h3>Proton Mail</h3><hr>
+      <p>Poczta oferująca szyfrowanie end-to-end i ochronę przed trackerami. Aplikacja na Androida jest open source (GPLv3).</p>
+      <div class="alert warning"><strong>Higiena metadanych:</strong> Gotowe paczki APK oraz wersja z Google Play zawierają biblioteki Firebase i Sentry. Jeśli nie kompilujesz aplikacji samodzielnie, musisz zaakceptować obecność tych bibliotek jako świadomy kompromis.</div>
+      <a href="https://github.com/ProtonMail/android-mail" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Addy.io</h3><hr>
+      <p>W pełni otwarty i niezależny menedżer aliasów pocztowych. Skutecznie izoluje główną skrzynkę odbiorczą przed spamem i profilowaniem behawioralnym.</p>
+      <a href="https://github.com/anonaddy/addy-android" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Notatki i organizacja</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Markor</h3><hr>
+      <p>Lekki edytor czystego tekstu. Działa w pełni offline, nie posiada uprawnień sieciowych, a pliki zapisuje bezpośrednio w pamięci urządzenia.</p>
+      <a href="https://github.com/gsantner/markor" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Notesnook</h3><hr>
+      <p>Szyfrowany end-to-end menedżer notatek z trybem offline. Pozwala zachować pełną kontrolę nad danymi i chroni przed analityką.</p>
+      <a href="https://github.com/streetwriters/notesnook" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Open Notes</h3><hr>
+      <p>Minimalistyczny notatnik oferujący renderowanie Markdown i szyfrowane kopie zapasowe bez zbędnych uprawnień systemowych.</p>
+      <div class="alert info"><strong>Status rozwoju:</strong> Ostatnia istotna aktualizacja miała miejsce w październiku 2026. Projekt jest aktywny, choć rozwijany w spokojnym tempie.</div>
+      <a href="https://github.com/Fandroid745/Open-notes" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Galerie i edycja zdjęć</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Ente Photos</h3><hr>
+      <p>Alternatywa dla rozwiązań komercyjnych oferująca bezpieczne przechowywanie multimediów w chmurze z szyfrowaniem end-to-end.</p>
+      <a href="https://github.com/ente-io/ente" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Iris Gallery</h3><hr>
+      <p>Szybka, w pełni offline galeria zdjęć z wbudowanym edytorem i prywatnym sejfem.</p>
+      <div class="alert success"><strong>W 100% offline:</strong> Manifest nie żąda uprawnienia INTERNET, a audyty Exodus Privacy nie wykryły żadnych trackerów.</div>
+      <a href="https://github.com/MohamadOday/iris-gallery" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>ReFra</h3><hr>
+      <p>Nowoczesna i szybka galeria zdjęć z wydajnym wariantem funkcjonującym całkowicie bez uprawnień sieciowych.</p>
+      <div class="alert info"><strong>Wybór wariantu:</strong> Domyślna wersja zawiera funkcje online. Aby uzyskać w pełni offline'owy odpowiednik, wybierz wariant <code>offline</code> z wydania na GitHubie.</div>
+      <a href="https://github.com/IacobIonut01/ReFra" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Image Toolbox</h3><hr>
+      <p>Wielofunkcyjny edytor obrazów działający w pełni lokalnie. Umożliwia zaawansowaną edycję oraz bezpieczne wycinanie metadanych.</p>
+      <div class="alert warning"><strong>Uprawnienie sieciowe:</strong> Manifest zawiera uprawnienie INTERNET (prawdopodobnie do pobierania modeli AI). Jeśli chcesz mieć pewność, że aplikacja nie łączy się z siecią, zablokuj jej dostęp przez firewall systemowy.</div>
+      <a href="https://github.com/T8RIN/ImageToolbox" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Multimedia</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>PipePipe</h3><hr>
+      <p>Rozbudowany fork NewPipe. Skutecznie omija algorytmy YouTube i natywnie blokuje segmenty sponsorowane w filmach.</p>
+      <div class="alert warning"><strong>Wykryty tracker:</strong> Audyt Exodus Privacy wykrył w aplikacji jeden tracker. Mimo to pozostaje jednym z najlepszych klientów YouTube pod kątem funkcji i blokowania reklam.</div>
+      <a href="https://github.com/InfinityLoop1308/PipePipe" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Flow</h3><hr>
+      <p>Nowoczesny odtwarzacz wideo i audio z w pełni lokalnym silnikiem rekomendacji (FlowNeuro), który nie wysyła danych do chmury.</p>
+      <a href="https://github.com/a-edev/Flow" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Seal</h3><hr>
+      <p>Prosty i skuteczny downloader (oparty na yt-dlp) do zapisywania materiałów z sieci na pamięć urządzenia.</p>
+      <a href="https://github.com/JunkFood02/Seal" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>Przechowywanie danych i chmura</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>Filen</h3><hr>
+      <p>Klient chmury oferujący rygorystyczne szyfrowanie end-to-end z architekturą Zero Knowledge.</p>
+      <div class="alert info"><strong>Historia trackerów:</strong> Starsze wersje aplikacji zawierały Sentry i Firebase Analytics. Najnowsze wydania (4.0.x) są według Exodus Privacy wolne od znanych trackerów.</div>
+      <a href="https://github.com/FilenCloudDienste/filen-ts" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>Proton Drive</h3><hr>
+      <p>Szyfrowana chmura z architekturą Zero Knowledge. Umożliwia bezpieczne przechowywanie i udostępnianie plików.</p>
+      <div class="alert warning"><strong>Zależności zewnętrzne:</strong> Podobnie jak Proton Mail, oficjalne wydania zawierają biblioteki Firebase i Sentry. Jeśli zależy Ci na 100% czystym środowisku, wymaga to samodzielnej kompilacji.</div>
+      <a href="https://github.com/ProtonDriveApps/android-drive" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+  <h2>System i narzędzia</h2>
+  <div class="app-grid">
+    <div class="app-card">
+      <h3>HeliBoard</h3><hr>
+      <p>W pełni konfigurowalna klawiatura ekranowa. Nigdy nie łączy się z siecią, co gwarantuje, że wpisywane hasła i dane nie wyciekną.</p>
+      <a href="https://github.com/HeliBorg/HeliBoard" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+    <div class="app-card">
+      <h3>CoMaps</h3><hr>
+      <p>Prywatna nawigacja offline oparta na OpenStreetMap. Działa bez trackerów i nie wymaga zakładania konta.</p>
+      <a href="https://github.com/comaps/comaps" target="_blank" rel="noopener">➔ Przejdź do repozytorium</a>
+    </div>
+  </div>
+
+</article>
+{% endblock %}
