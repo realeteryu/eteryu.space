@@ -5,6 +5,7 @@ description = "Bez lukru o Tor Browserze. Omówienie realnych korzyści (anonimo
 
 [extra]
 toc = true
+image = "og/posts/tor-browser-og.png"
 +++
 
 Tor Browser to bez wątpienia jedno z najważniejszych narzędzi w arsenale obrońców prywatności. Routing cebulowy i sieć tysięcy wolontariuszy na całym świecie robią robotę, której żaden komercyjny VPN nie jest w stanie zapewnić. Często rozprawiamy się ze stereotypem Tora jako narzędzia służącego wyłącznie do nielegalnych działań w Dark Webie. Zejście z tego stereotypu jest kluczowe, ponieważ Tor jest nieocenionym wsparciem dla dziennikarzy, aktywistów czy dysydentów.
