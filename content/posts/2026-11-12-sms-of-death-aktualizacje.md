@@ -60,8 +60,8 @@ CVE-2026-58882 nie jest wyrafinowanym atakiem. To błąd walidacji, który móg�
 
 ## Przypisy
 
-[^1]: CVE-2026-58882: Android "SMS of Death" Vulnerability. ThaiCERT. [https://www.thaicert.or.th/en/2026/11/02/android-sms-of-death-vulnerability-could-crash-phone-services-through-crafted-messages/](https://www.thaicert.or.th/en/2026/11/02/android-sms-of-death-vulnerability-could-crash-phone-services-through-crafted-messages/)
-[^2]: CWE-197: Numeric Truncation Error. Common Weakness Enumeration. [https://cwe.mitre.org/data/definitions/197.html](https://cwe.mitre.org/data/definitions/197.html)
-[^3]: BleepingComputer. (2026, October 31). New Android SMS of Death exploit can remotely crash unpatched phones. [https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/](https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/)
-[^4]: eSecurity Planet. (2026, October 30). Android 'SMS of Death' Flaw Can Drop Emergency Calls, Trigger Reboot Loops. [https://www.esecurityplanet.com/threats/news-android-sms-of-death-cve-2026-58882/](https://www.esecurityplanet.com/threats/news-android-sms-of-death-cve-2026-58882/)
-[^5]: Android Authority. (2026, October 30). Android's SMS of Death bug can knock out your phone, but a fix is coming soon. [https://mobile.androidauthority.com/android-sms-of-death-google-fix-3729929/](https://mobile.androidauthority.com/android-sms-of-death-google-fix-3729929/)
+[^1]: ThaiCERT. (2026, November 2). *CVE-2026-58882: Android "SMS of Death" Vulnerability*. [Link](https://www.thaicert.or.th/en/2026/11/02/android-sms-of-death-vulnerability-could-crash-phone-services-through-crafted-messages/)
+[^2]: Common Weakness Enumeration. (n.d.). *CWE-197: Numeric Truncation Error*. [Link](https://cwe.mitre.org/data/definitions/197.html)
+[^3]: BleepingComputer. (2026, October 31). *New Android SMS of Death exploit can remotely crash unpatched phones*. [Link](https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/)
+[^4]: eSecurity Planet. (2026, October 30). *Android 'SMS of Death' Flaw Can Drop Emergency Calls, Trigger Reboot Loops*. [Link](https://www.esecurityplanet.com/threats/news-android-sms-of-death-cve-2026-58882/)
+[^5]: Android Authority. (2026, October 30). *Android's SMS of Death bug can knock out your phone, but a fix is coming soon*. [Link](https://mobile.androidauthority.com/android-sms-of-death-google-fix-3729929/)
