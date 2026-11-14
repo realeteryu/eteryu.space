@@ -7,7 +7,7 @@
 
 {%- block main -%}
     <article class="home-section">
-      <h2>{{ config.extra.latest_posts_title }}</h2>
+      <h1>{{ config.extra.latest_posts_title }}</h1>
       {%- set posts_section = get_section(path="posts/_index.md") %}
       <ul class="pages-list">
       {%- for post in posts_section.pages | sort(attribute="date") | reverse %}
