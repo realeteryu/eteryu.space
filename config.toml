@@ -52,6 +52,10 @@ name = "Wpisy"
 url = "@/posts/_index.md"
 
 [[extra.nav]]
+name = "Katalog"
+url = "@/catalog/_index.md"
+
+[[extra.nav]]
 name = "Kanał"
 url = "@/channel/_index.md"
 
