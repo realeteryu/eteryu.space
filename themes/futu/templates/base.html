@@ -18,6 +18,8 @@
   {%- endif %}
   <meta name="robots" content="max-image-preview:large" />
   <link rel=canonical href="{{ permalink | safe }}">
+
+  <!-- open graph i social media -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ permalink | safe }}">
   <meta property="og:site_name" content="{{ config.title }}">
@@ -25,19 +27,32 @@
   {% if description -%}
   <meta property="og:description" content="{{ description }}">
   {% endif -%}
-  <meta name=twitter:card content="summary">
-  <meta name=twitter:title content="{{ title }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
   {% if description -%}
-  <meta name=twitter:description content="{{ description }}">
+  <meta name="twitter:description" content="{{ description }}">
   {% endif -%}
+  
+  {%- if page and page.extra.image -%}
+    <meta property="og:image" content="{{ get_url(path=page.extra.image) }}">
+    <meta name="twitter:image" content="{{ get_url(path=page.extra.image) }}">
+  {%- else -%}
+    <!-- fallback dla strony glownej i wpisow bez dedykowanego obrazka -->
+    <meta property="og:image" content="{{ get_url(path='og/default-og.png') }}">
+    <meta name="twitter:image" content="{{ get_url(path='og/default-og.png') }}">
+  {%- endif -%}
 
+  <!-- favicony i ikony -->
+  <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}" />
+  <link rel="icon" type="image/png" href="{{ get_url(path='favicon-96x96.png') }}" sizes="96x96" />
+  <link rel="shortcut icon" href="{{ get_url(path='favicon.ico') }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='apple-touch-icon.png') }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='favicon-32x32.png') }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='favicon-16x16.png') }}" />
   <link rel="manifest" href="{{ get_url(path='site.webmanifest') }}" />
-  <link rel="icon" sizes="16x16" href="{{ get_url(path='favicon.ico') }}" />
+  
+  <!-- rss i style -->
   <link rel=alternate type=application/rss+xml href="{{ get_url(path='index.xml') }}" title={{ config.title }}/>
   <link rel="stylesheet" href="{{ get_url(path='main.css') }}"/>
+  
   {%- if config.extra.googleVerification %}
   <meta name="google-site-verification" content="{{ config.extra.googleVerification }}" />
   {%- endif %}
