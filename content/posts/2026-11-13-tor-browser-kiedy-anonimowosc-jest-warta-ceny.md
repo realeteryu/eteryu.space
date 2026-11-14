@@ -114,6 +114,6 @@ Nie jest to jednak przeglądarka dla każdego i do wszystkiego. Świadome korzys
 [^5]: LWN.net. (2025, November 20). *Tails Practical?*. [Link](https://lwn.net/Articles/1046296/)
 [^6]: Mallory. (2026, October 20). *Researcher Reports 333 Tor Exit Nodes Hijacking SSH Traffic to Steal Credentials*. [Link](https://mallory.ai/stories/01a159b1-f074-7bb1-83a0-bffe8989d2a2)
 [^7]: Tor Project. (n.d.). *Download Tor Browser*. [Link](https://www.torproject.org/download/)
-[^8]: Tor Project. (n.d.). *Orbot*. [Link](https://support.torproject.org/tormobile/tormobile-6/)
+[^8]: Orbot. (n.d.). *FAQs*. [Link](https://orbot.app/faqs)
 [^9]: ThaiCERT. (2026, April 29). *CVE-2026-6770 Vulnerability Found in Firefox and Tor Browser, Risk of Cross-Site Fingerprinting Tracking*. [Link](https://www.thaicert.or.th/en/2026/04/29/cve-2026-6770-vulnerability-found-in-firefox-and-tor-browser-risk-of-cross-site-fingerprinting-tracking/)
 [^10]: The Hacker News. (2026, July 29). *Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser*. [Link](https://thehackernews.com/2026/07/researchers-show-single-malicious.html)
