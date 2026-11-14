@@ -107,13 +107,13 @@ Nie jest to jednak przeglądarka dla każdego i do wszystkiego. Świadome korzys
 
 ## Przypisy
 
-[^1]: Tor Project. (n.d.). *Snowflake*. [https://snowflake.torproject.org/](https://snowflake.torproject.org/)
-[^2]: SecureDrop. (n.d.). *SecureDrop*. [https://securedrop.org/](https://securedrop.org/)
-[^3]: Shattered. (2026, August 25). *Tor Browser vs. VPN: 5 vs. 900 Mbit/s im Test*. [https://shattered.io/tor-browser-vs-vpn/](https://shattered.io/tor-browser-vs-vpn/)
-[^4]: Shattered. (2026, June 14). *Tor vs VPN [2026] : 3 relais, le VPN gagne en vitesse*. [https://shattered.io/tor-vs-vpn/](https://shattered.io/tor-vs-vpn/)
-[^5]: LWN.net. (2025, November 20). *Tails Practical?*. [https://lwn.net/Articles/1046296/](https://lwn.net/Articles/1046296/)
-[^6]: Mallory. (2026, October 20). *Researcher Reports 333 Tor Exit Nodes Hijacking SSH Traffic to Steal Credentials*. [https://mallory.ai/research/333-tor-exit-nodes-hijacking-ssh-traffic-to-steal-credentials](https://mallory.ai/research/333-tor-exit-nodes-hijacking-ssh-traffic-to-steal-credentials)
-[^7]: Tor Project. (n.d.). *Can I run Tor Browser on an iOS device?*. [https://support.torproject.org/tor-browser/ios/](https://support.torproject.org/tor-browser/ios/)
-[^8]: Tor Project. (n.d.). *Do I need both Tor Browser for Android and Orbot, or only one?*. [https://support.torproject.org/tor-browser/android/orbot/](https://support.torproject.org/tor-browser/android/orbot/)
-[^9]: ThaiCERT. (2026, April 29). *CVE-2026-6770 Vulnerability Found in Firefox and Tor Browser, Risk of Cross-Site Fingerprinting Tracking*. [https://www.thaicert.or.th/en/2026/04/29/cve-2026-6770-vulnerability-found-in-firefox-and-tor-browser-risk-of-cross-site-fingerprinting-tracking/](https://www.thaicert.or.th/en/2026/04/29/cve-2026-6770-vulnerability-found-in-firefox-and-tor-browser-risk-of-cross-site-fingerprinting-tracking/)
-[^10]: The Hacker News. (2026, July 29). *Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser*. [https://thehackernews.com/2026/07/researchers-show-single-malicious.html](https://thehackernews.com/2026/07/researchers-show-single-malicious.html)
+[^1]: Tor Project. (n.d.). *Snowflake*. [Link](https://snowflake.torproject.org/)
+[^2]: SecureDrop. (n.d.). *SecureDrop*. [Link](https://securedrop.org/)
+[^3]: Shattered. (2026, August 25). *Tor Browser vs. VPN: 5 vs. 900 Mbit/s im Test*. [Link](https://shattered.io/tor-browser-vs-vpn/)
+[^4]: Shattered. (2026, June 14). *Tor vs VPN [2026] : 3 relais, le VPN gagne en vitesse*. [Link](https://shattered.io/tor-vs-vpn/)
+[^5]: LWN.net. (2025, November 20). *Tails Practical?*. [Link](https://lwn.net/Articles/1046296/)
+[^6]: Mallory. (2026, October 20). *Researcher Reports 333 Tor Exit Nodes Hijacking SSH Traffic to Steal Credentials*. [Link](https://mallory.ai/research/333-tor-exit-nodes-hijacking-ssh-traffic-to-steal-credentials)
+[^7]: Tor Project. (n.d.). *Download Tor Browser*. [Link](https://www.torproject.org/download/)
+[^8]: Tor Project. (n.d.). *Support*. [Link](https://support.torproject.org/)
+[^9]: ThaiCERT. (2026, April 29). *CVE-2026-6770 Vulnerability Found in Firefox and Tor Browser, Risk of Cross-Site Fingerprinting Tracking*. [Link](https://www.thaicert.or.th/en/2026/04/29/cve-2026-6770-vulnerability-found-in-firefox-and-tor-browser-risk-of-cross-site-fingerprinting-tracking/)
+[^10]: The Hacker News. (2026, July 29). *Researchers Show a Single Malicious Webpage Visit Can Compromise Tor Browser*. [Link](https://thehackernews.com/2026/07/researchers-show-single-malicious.html)
