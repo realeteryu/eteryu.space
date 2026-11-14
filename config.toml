@@ -42,9 +42,6 @@ date_locale = "pl_PL"
 date_format_home = "d MMMM y"
 date_format_posts = "d MMM"
 
-# analityka (goatcounter)
-goatcounter_code = "eteryu"
-
 # nawigacja
 [[extra.nav]]
 name = "Strona główna"
