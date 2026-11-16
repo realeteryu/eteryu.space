@@ -1,7 +1,6 @@
 +++
-title = "Wpisy"
+title = "Archiwum."
 sort_by = "date"
-template = "posts.html"
+template = "section.html"
 page_template = "page.html"
-paginate_by = 10
 +++
