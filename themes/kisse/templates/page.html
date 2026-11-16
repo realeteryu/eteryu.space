@@ -17,7 +17,7 @@
             
             {% if page.date %}
             <div class="post-meta">
-                <time>{{ page.date | date(format="%d %B %Y") }}</time>
+                <time>{{ page.date | date(format="%d.%m.%Y") }}</time>
                 <span itemprop="author">{{ config.extra.author }}</span>
             </div>
             {% endif %}
