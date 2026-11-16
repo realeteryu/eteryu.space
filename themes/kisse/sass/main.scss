@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+@import url("https://fonts.bunny.net/css?family=roboto:400,700&display=swap");
+
+$sans-family: 'Roboto', sans-serif;
+$mono-family: 'Consolas', monospace;
+$base-font-size: 16px;
+$medium-font-size: $base-font-size * 0.938;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.85;
+
+$normal-weight: 400;
+$bold-weight: 700;
+
+$text-base-color: #434648;
+$text-link-blue: #003fff;
+$text-link-blue-active: #0036c7;
+
+$black: #0d122b;
+$light: #ececec;
+$smoke: #d2c7c7;
+$gray: #6b7886;
+$white: #fff;
+
+$dark-text-base-color: #c7bebe;
+$dark-text-link-blue: #ff5277;
+$dark-text-link-blue-active: #ff2957;
+
+$dark-black: #131418;
+$dark-white: #eaeaea;
+$dark-light: #1b1d25;
+$dark-smoke: #4a4d56;
+$dark-gray: #767f87;
+
+$wide-size: 890px;
+$narrow-size: 720px;
+
+$spacing-full: 30px;
+$spacing-half: $spacing-full / 2;
+
+$on-mobile: 768px;
+$on-tablet: 769px;
+$on-desktop: 1024px;
+$on-widescreen: 1152px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin relative-font-size($ratio) {
+    font-size: $base-font-size * $ratio;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+    font-family: $sans-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-base-color;
+    background-color: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: calc(#{$narrow-size} - (#{$spacing-full} * 2));
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-full;
+    padding-left: $spacing-full;
+
+    @include media-query($on-mobile) {
+        max-width: calc(#{$narrow-size} - (#{$spacing-full}));
+        padding-right: $spacing-full - 10;
+        padding-left: $spacing-full - 10;
+    }
+}
+
+@include media-query($on-mobile) {
+    .blurry {
+        animation: 0.2s ease-in forwards blur;
+        -webkit-animation: 0.2s ease-in forwards blur;
+    }
+}
+
+@import "kisse/base", "kisse/post", "kisse/miscellaneous", "kisse/syntax", "kisse/dark";
