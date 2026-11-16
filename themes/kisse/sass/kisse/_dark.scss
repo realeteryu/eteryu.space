@@ -31,7 +31,13 @@ body[data-theme="dark"] {
             border-top-color: $dark-light;
             color: $dark-gray;
 
-            li::marker {
+            /* Kolory dla listy numerowanej */
+            ol li::marker {
+                color: $dark-white;
+            }
+
+            /* Kolory dla bloków z przypisami */
+            .footnote-definition-label {
                 color: $dark-white;
             }
 
