@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config.default_language | default(value='en') }}">
+<html lang="{{ config.default_language | default(value='pl') }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@
 
     <div class="navbar" role="navigation">
         <nav class="menu">
-            <a id="mode" href="javascript:void(0);" title="Toggle theme">
+            <a id="mode" href="javascript:void(0);" title="Zmień motyw">
                 <svg class="mode-sunny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="5"></circle>
                     <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -78,7 +78,7 @@
                     <a href="{{ item_url }}" class="menu-link {% if is_active %}active{% endif %}">{{ item.name }}</a>
                 {% endfor %}
 
-                <a href="{{ get_url(path='index.xml') }}" class="menu-link rss" title="RSS Feed">
+                <a href="{{ get_url(path='index.xml') }}" class="menu-link rss" title="Kanał RSS">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
                         <path d="M108.56,342.78a60.34,60.34,0,1,0,60.56,60.44A60.63,60.63,0,0,0,108.56,342.78Z"/>
                         <path d="M48,186.67v86.55c52,0,101.94,15.39,138.67,52.11s52,86.56,52,138.67h86.66C325.33,312.44,199.67,186.67,48,186.67Z"/>
