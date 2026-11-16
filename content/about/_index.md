@@ -1,6 +1,6 @@
 +++
-title = "O mnie"
-template = "section.html"
+title = "About"
+template = "about.html"
 +++
 
 Inżynier i praktyk bezpieczeństwa. Interesuje mnie suwerenność cyfrowa, FOSS oraz to, jak działają systemy – nie tylko jak wyglądają w broszurach.
