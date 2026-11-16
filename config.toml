@@ -24,13 +24,13 @@ avatar = "https://avatars.githubusercontent.com/u/117126022?s=400&u=6d6363ad30ba
 footer_text = "<a href='https://github.com/realeteryu/zola-kisse'>kisse</a> theme for <a href='https://www.getzola.org'>zola</a>"
 
 [[extra.nav]]
-name = "home"
+name = "start"
 url = "@/_index.md"
 
 [[extra.nav]]
-name = "archive"
+name = "archiwum"
 url = "@/posts/_index.md"
 
 [[extra.nav]]
-name = "about"
+name = "o mnie"
 url = "@/about/_index.md"
