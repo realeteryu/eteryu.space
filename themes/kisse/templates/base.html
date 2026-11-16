@@ -66,7 +66,7 @@
                 {% for item in config.extra.nav %}
                     {% set item_url = item.url %}
                     
-                    {% if item.url is starting_when or item.url is starting_with(pat="@") %}
+                    {% if item.url is starting_with(pat="@") %}
                         {% set item_url = get_url(path=item.url) %}
                     {% endif %}
                     
