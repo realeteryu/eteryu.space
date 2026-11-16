@@ -21,7 +21,7 @@ theme = "gruvbox-dark-medium"
 [extra]
 author = "Eteryu"
 avatar = "https://avatars.githubusercontent.com/u/117126022?s=400&u=6d6363ad30ba498f53133c6712a8a75455b6aad6&v=4"
-footer_text = "<a href='https://github.com/realeteryu/zola-kisse'>kisse</a> theme for <a href='https://www.getzola.org'>zola</a>"
+footer_text = "motyw <a href='https://github.com/realeteryu/zola-kisse'>kisse</a> dla <a href='https://www.getzola.org'>zola</a>"
 
 [[extra.nav]]
 name = "start"
