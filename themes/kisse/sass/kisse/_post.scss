@@ -166,71 +166,35 @@
         font-style: italic;
     }
 
-    .footnotes {
-        margin-top: 4em;
-        border-top: 1px dashed $light;
-        padding-top: 1.5em;
+    /* Stylizacja przypisów (Zola generuje strukturę divów) */
+    .footnote-definition {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1em;
         font-size: $small-font-size;
         color: $gray;
+        line-height: 1.6;
 
-        /* Ukrywamy domyślną linię Zoli */
-        hr {
-            display: none;
-        }
+        .footnote-definition-label {
+            font-weight: $bold-weight;
+            color: $text-base-color;
+            margin-right: 0.6em;
+            min-width: 1.5em;
+            flex-shrink: 0;
 
-        /* Stylizacja dla standardowej listy <ol> */
-        ol {
-            margin: 0;
-            padding-left: 2em;
-            list-style-type: decimal !important;
-
-            li {
-                display: list-item !important;
-                margin-bottom: 1em;
-                line-height: 1.6;
-                padding-left: 0.5em;
-
-                &::marker {
-                    font-weight: $bold-weight;
-                    color: $text-base-color;
-                }
-
-                p {
-                    margin: 0 !important;
-                }
+            &::after {
+                content: ".";
             }
         }
 
-        /* Stylizacja dla bloków <div> generowanych przez Zolę */
-        .footnote-definition {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 1em;
-            line-height: 1.6;
-
-            .footnote-definition-label {
-                font-weight: $bold-weight;
-                color: $text-base-color;
-                margin-right: 0.5em;
-                min-width: 1.5em;
-                display: inline-block;
-
-                &::after {
-                    content: ".";
-                }
-            }
-
-            p {
-                margin: 0 !important;
-                flex: 1;
-            }
+        > p {
+            margin: 0 !important;
+            flex: 1;
         }
 
-        /* Link powrotny do tekstu */
         a {
             color: $text-link-blue;
             text-decoration: none;
-            margin-left: 5px;
 
             &:hover {
                 color: $text-link-blue-active;
@@ -244,6 +208,7 @@
         }
     }
 
+    /* Stylizacja odnośnika do przypisu w tekście */
     .footnote-reference {
         font-size: 0.85em;
         vertical-align: super;
