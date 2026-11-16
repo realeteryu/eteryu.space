@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Tag: {{ term.name }} — {{ config.title }}{% endblock %}
+
+{% block main %}
+<div class="page-content">
+    <div class="archive-header">
+        <h1 class="header-title center">Tag: {{ term.name | upper }}</h1>
+    </div>
+
+    <div class="archive-page">
+        {% for page in term.pages %}
+            <article class="post-item">
+                <span class="post-item-date">{{ page.date | date(format="%b %d, %Y") }}</span>
+                <h3 class="post-item-title">
+                    <a href="{{ page.permalink }}">{{ page.title }}</a>
+                </h3>
+            </article>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}
