@@ -1,0 +1,68 @@
+code {
+    font-family: $mono-family;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: normal;
+    white-space: pre-wrap;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    font-size: 0.9em;
+
+    &:not(pre code) {
+        padding: 2px 6px;
+        background-color: #f6f6f6;
+        border-radius: 4px;
+        border: 1px solid rgba(128, 128, 128, 0.1);
+    }
+}
+
+pre {
+    margin: 0 -27px;
+    @include media-query($on-mobile) {
+        margin: 0 calc(51% - 51vw);
+        padding-left: 20px;
+    }
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    background-color: #1a1b21;
+    border-radius: 6px;
+    padding: 15px;
+    display: block;
+    overflow-x: auto;
+    line-height: 1.5;
+
+    > code {
+        font-size: 0.95em;
+        display: block;
+        color: #fbf1c7;
+        white-space: pre;
+        background: none;
+        padding: 0;
+        border: none;
+    }
+}
+
+pre .w { color: #fbf1c7; }
+pre .err { color: #fb4934; font-weight: bold; }
+pre .c, pre .cd, pre .cm, pre .c1, pre .cs { color: #928374; font-style: italic; }
+pre .cp { color: #8ec07c; }
+pre .nt { color: #fb4934; }
+pre .o, pre .ow { color: #fbf1c7; }
+pre .p, pre .pi { color: #fbf1c7; }
+pre .gi { color: #b8bb26; background-color: #282828; }
+pre .gd { color: #fb4934; background-color: #282828; }
+pre .gh { color: #b8bb26; font-weight: bold; }
+pre .k, pre .kn, pre .kp, pre .kr, pre .kv { color: #fb4934; }
+pre .kc { color: #d3869b; }
+pre .kt { color: #fabd2f; }
+pre .kd { color: #fe8019; }
+pre .s, pre .sb, pre .sc, pre .sd, pre .s2, pre .sh, pre .sx, pre .s1 { color: #b8bb26; font-style: italic; }
+pre .si { color: #b8bb26; font-style: italic; }
+pre .sr { color: #b8bb26; font-style: italic; }
+pre .se { color: #fe8019; }
+pre .nn { color: #8ec07c; }
+pre .nc { color: #8ec07c; }
+pre .no { color: #d3869b; }
+pre .na { color: #b8bb26; }
+pre .m, pre .mf, pre .mh, pre .mi, pre .il, pre .mo, pre .mb, pre .mx { color: #d3869b; }
+pre .ss { color: #83a598; }
