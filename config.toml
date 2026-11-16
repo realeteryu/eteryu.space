@@ -1,70 +1,36 @@
-# adres url, pod którym będzie budowana strona
 base_url = "https://eteryu.space/"
 title = "Eteryu.space"
 description = "Blog o cyfrowej higienie, prywatności i bezpieczeństwie"
-author = "Eteryu"
-theme = "futu"
 
-# automatyczna kompilacja plików sass
+theme = "kisse"
+
 compile_sass = true
-# generowanie kanałów rss/atom
 generate_feeds = true
 feed_filenames = ["index.xml"]
 
-# zachowuje daty w adresach url (tak jak w oryginalnym motywie)
-[slugify]
-paths_keep_dates = true
+taxonomies = [
+    { name = "tags" },
+]
 
 [markdown]
-# renderowanie emoji w treści
 render_emoji = true
-# przypisy na dole strony
-bottom_footnotes = true
 
-# poprawiona składnia podświetlania kodu dla nowszych wersji zoli
 [markdown.highlighting]
-theme = "github-light"
+theme = "gruvbox-dark-medium"
 
-# tutaj umieść swoje własne zmienne
 [extra]
-# poprawia wersję wyświetlaną w stopce
-zola_version = "0.23.6"
+author = "Eteryu"
+avatar = "https://avatars.githubusercontent.com/u/117126022?s=400&u=6d6363ad30ba498f53133c6712a8a75455b6aad6&v=4"
+footer_text = "<a href='https://github.com/realeteryu/zola-kisse'>kisse</a> theme for <a href='https://www.getzola.org'>zola</a>"
 
-# kontakt
-contact_email = "kontakt@distrust.pl"
-
-# teksty interfejsu
-latest_posts_title = "Ostatnie wpisy"
-view_all_text = "Zobacz wszystkie →"
-
-# formaty daty (UTS-35)
-date_locale = "pl_PL"
-date_format_home = "d MMMM y"
-date_format_posts = "d MMM"
-
-# nawigacja
 [[extra.nav]]
-name = "Strona główna"
+name = "home"
 url = "@/_index.md"
 
 [[extra.nav]]
-name = "Wpisy"
+name = "archive"
 url = "@/posts/_index.md"
 
 [[extra.nav]]
-name = "Katalog"
-url = "@/catalog/_index.md"
-
-[[extra.nav]]
-name = "Kanał"
-url = "@/channel/_index.md"
-
-[[extra.nav]]
-name = "O mnie"
+name = "about"
 url = "@/about/_index.md"
-
-# integracja z mastodonem
-[extra.mastodon]
-instanceUrl = "https://101010.pl"
-userId = "117549860256050239"
-profileName = "@Eteryu"
