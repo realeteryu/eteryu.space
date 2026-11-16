@@ -1,4 +1,4 @@
 +++
 title = "Katalog Oprogramowania"
-template = "catalog.html"
+template = "section.html"
 +++
