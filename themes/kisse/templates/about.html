@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% endif %} — {{ config.title }}
+{% endblock title %}
+
+{% block main %}
+    <article>
+        <div class="header" style="margin-bottom: 2em;">
+            <h1 class="header-title center">
+                {% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% endif %}
+            </h1>
+        </div>
+        
+        <div class="page-content">
+            {% if page %}{{ page.content | safe }}{% elif section %}{{ section.content | safe }}{% endif %}
+        </div>
+    </article>
+{% endblock main %}

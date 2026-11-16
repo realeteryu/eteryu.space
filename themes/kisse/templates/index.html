@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="author">
+        <img class="author-avatar" src="{{ config.extra.avatar }}" alt="{{ config.extra.author }}">
+        <h1 class="author-name">{{ config.title }}</h1>
+        <p class="author-bio">{{ config.description | safe }}</p>
+    </div>
+
+    <div class="post-list-wrapper">
+        <h2>Latest Posts</h2>
+        <ul class="post-list">
+        {% set posts_section = get_section(path="posts/_index.md") %}
+        {% for page in posts_section.pages %}
+            <li class="post-item">
+                <span class="post-item-date">
+                    {% if page.date %}
+                        {{ page.date | date(format="%b %d, %Y") }}
+                    {% endif %}
+                </span>
+                <a href="{{ page.permalink }}" class="post-item-title">{{ page.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock main %}

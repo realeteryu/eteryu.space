@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="{{ config.default_language | default(value='en') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+
+    <link rel="icon" type="image/png" href="{{ get_url(path='favicon-96x96.png') }}" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="{{ get_url(path='favicon.svg') }}">
+    <link rel="shortcut icon" href="{{ get_url(path='favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ get_url(path='site.webmanifest') }}">
+</head>
+<body>
+    <script>
+        const theme = (() => {
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                return localStorage.getItem('theme');
+            }
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+            return 'light';
+        })();
+        document.body.setAttribute('data-theme', theme);
+        window.localStorage.setItem('theme', theme);
+    </script>
+
+    {% set c_path = current_path | default(value="") %}
+
+    <div class="navbar" role="navigation">
+        <nav class="menu">
+            <a id="mode" href="javascript:void(0);" title="Toggle theme">
+                <svg class="mode-sunny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </a>
+
+            <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+            <label for="menu-trigger">
+                <span class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                        <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                    </svg>
+                </span>
+            </label>
+
+            <div class="trigger">
+                {% for item in config.extra.nav %}
+                    {% set item_url = item.url %}
+                    
+                    {% if item.url is starting_with(pat="@") %}
+                        {% set item_url = get_url(path=item.url) %}
+                    {% endif %}
+                    
+                    {% set item_path = item_url | replace(from=config.base_url, to="") %}
+                    {% if item_path == "" %}
+                        {% set item_path = "/" %}
+                    {% endif %}
+                    
+                    {% set is_active = false %}
+                    {% if c_path == item_path %}
+                        {% set is_active = true %}
+                    {% elif item_path != "/" and c_path is starting_with(pat=item_path) %}
+                        {% set is_active = true %}
+                    {% endif %}
+                    
+                    <a href="{{ item_url }}" class="menu-link {% if is_active %}active{% endif %}">{{ item.name }}</a>
+                {% endfor %}
+
+                <a href="{{ get_url(path='index.xml') }}" class="menu-link rss" title="RSS Feed">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M108.56,342.78a60.34,60.34,0,1,0,60.56,60.44A60.63,60.63,0,0,0,108.56,342.78Z"/>
+                        <path d="M48,186.67v86.55c52,0,101.94,15.39,138.67,52.11s52,86.56,52,138.67h86.66C325.33,312.44,199.67,186.67,48,186.67Z"/>
+                        <path d="M48,48v86.56c185.25,0,329.22,144.08,329.22,329.44H464C464,234.66,277.67,48,48,48Z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <main class="wrapper">
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        {% for item in config.extra.nav %}
+            {% set item_url = item.url %}
+            {% if item.url is starting_with(pat="@") %}
+                {% set item_url = get_url(path=item.url) %}
+            {% endif %}
+            <a href="{{ item_url }}" class="footer_item">{{ item.name }}</a>
+        {% endfor %}
+        
+        <a href="{{ get_url(path='index.xml') }}" class="footer_item">rss</a>
+        <span class="footer_item">&copy; 2026</span>
+        <small class="footer_copyright">{{ config.extra.footer_text | default(value=config.title) | safe }}</small>
+    </footer>
+
+    <script>
+        document.getElementById('mode').addEventListener('click', () => {
+            const element = document.body;
+            const currentTheme = element.getAttribute('data-theme');
+            let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            element.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        document.getElementById('menu-trigger').addEventListener('change', function() {
+            const wrapper = document.querySelector('.wrapper');
+            const footer = document.querySelector('.footer');
+            
+            if (this.checked) {
+                wrapper.classList.add('blurry');
+                if (footer) footer.classList.add('blurry');
+                document.body.style.overflow = 'hidden';
+            } else {
+                wrapper.classList.remove('blurry');
+                if (footer) footer.classList.remove('blurry');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>

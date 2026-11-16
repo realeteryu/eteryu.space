@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block main %}
+    <article>
+        <div class="header">
+            {% if page.taxonomies.tags %}
+            <div class="tags">
+                {% for tag in page.taxonomies.tags %}
+                    <a href="{{ config.base_url }}/tags/#{{ tag | slugify }}" class="tag">{{ tag | upper }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            <h1 class="header-title">{{ page.title }}</h1>
+            
+            {% if page.date %}
+            <div class="post-meta">
+                <time>{{ page.date | date(format="%B %d, %Y") }}</time>
+                <span itemprop="author">{{ config.extra.author }}</span>
+            </div>
+            {% endif %}
+        </div>
+
+        {% if page.toc and page.extra.toc %}
+        <div class="toc">
+            <div class="toc-title">Table of Contents</div>
+            <ul class="toc-list">
+                {% for h1 in page.toc %}
+                <li class="toc-item">
+                    <a href="{{ h1.permalink | safe }}">{{ h1.title }}</a>
+                    {% if h1.children %}
+                    <ul class="toc-list">
+                        {% for h2 in h1.children %}
+                        <li class="toc-item">
+                            <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        <div class="page-content">
+            {{ page.content | safe }}
+        </div>
+
+        {% if page.higher or page.lower %}
+        <nav class="post-nav">
+            {% if page.higher %}
+            <div class="post-nav-item prev">
+                <a href="{{ page.higher.permalink }}" class="post-nav-link">
+                    <span class="nav-arrow">Previous</span>
+                    <span class="post-title">{{ page.higher.title | truncate(length=50) }}</span>
+                </a>
+            </div>
+            {% endif %}
+
+            {% if page.lower %}
+            <div class="post-nav-item next">
+                <a href="{{ page.lower.permalink }}" class="post-nav-link">
+                    <span class="nav-arrow">Next</span>
+                    <span class="post-title">{{ page.lower.title | truncate(length=50) }}</span>
+                </a>
+            </div>
+            {% endif %}
+        </nav>
+        {% endif %}
+    </article>
+{% endblock main %}
