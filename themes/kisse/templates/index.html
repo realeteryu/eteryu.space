@@ -11,7 +11,8 @@
         <h2>Najnowsze wpisy</h2>
         <ul class="post-list">
         {% set posts_section = get_section(path="posts/_index.md") %}
-        {% for page in posts_section.pages | slice(end=5) %}
+        {% for page in posts_section.pages %}
+            {% if loop.index <= 5 %}
             <li class="post-item">
                 <span class="post-item-date">
                     {% if page.date %}
@@ -20,6 +21,7 @@
                 </span>
                 <a href="{{ page.permalink }}" class="post-item-title">{{ page.title }}</a>
             </li>
+            {% endif %}
         {% endfor %}
         </ul>
     </div>
