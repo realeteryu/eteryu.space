@@ -29,11 +29,6 @@
             {% endif %}
             
             <article class="post-item">
-                <span class="post-item-date">
-                    {% if page.date %}
-                        {{ page.date | date(format="%d.%m.%Y") }}
-                    {% endif %}
-                </span>
                 <h3 class="post-item-title">
                     <a href="{{ page.permalink }}">{{ page.title }}</a>
                 </h3>
