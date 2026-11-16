@@ -8,14 +8,14 @@
     </div>
 
     <div class="post-list-wrapper">
-        <h2>Latest Posts</h2>
+        <h2>Najnowsze wpisy</h2>
         <ul class="post-list">
         {% set posts_section = get_section(path="posts/_index.md") %}
         {% for page in posts_section.pages %}
             <li class="post-item">
                 <span class="post-item-date">
                     {% if page.date %}
-                        {{ page.date | date(format="%b %d, %Y") }}
+                        {{ page.date | date(format="%d %b %Y") }}
                     {% endif %}
                 </span>
                 <a href="{{ page.permalink }}" class="post-item-title">{{ page.title }}</a>
