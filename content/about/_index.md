@@ -1,5 +1,5 @@
 +++
-title = "About"
+title = "Kolofon"
 template = "about.html"
 +++
 
