@@ -15,7 +15,7 @@
             <li class="post-item">
                 <span class="post-item-date">
                     {% if page.date %}
-                        {{ page.date | date(format="%b %d, %Y") }}
+                        {{ page.date | date(format="%d.%m.%Y") }}
                     {% endif %}
                 </span>
                 <a href="{{ page.permalink }}" class="post-item-title">{{ page.title }}</a>
