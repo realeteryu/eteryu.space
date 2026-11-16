@@ -175,6 +175,11 @@
         color: $gray;
         line-height: 1.6;
 
+        /* Dodatkowy oddech dla pierwszego przypisu */
+        &:first-of-type {
+            margin-top: 1.5em;
+        }
+
         .footnote-definition-label {
             font-weight: $bold-weight;
             color: $text-base-color;
