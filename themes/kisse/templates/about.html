@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Kolofon. — {{ config.title }}
+    {% if page %}{{ page.title }}{% elif section %}{{ section.title }}{% endif %} — {{ config.title }}
 {% endblock title %}
 
 {% block main %}
     <article>
         <div class="header" style="margin-bottom: 2em;">
+            <!-- Tutaj nagłówek jest na sztywno, niezależnie od pliku Markdown -->
             <h1 class="header-title center">Kolofon.</h1>
         </div>
         
         <div class="page-content">
-            {{ page.content | safe }}
+            {% if page %}{{ page.content | safe }}{% elif section %}{{ section.content | safe }}{% endif %}
         </div>
     </article>
 {% endblock main %}
