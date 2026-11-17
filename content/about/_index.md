@@ -3,25 +3,19 @@ title = "Kolofon"
 template = "about.html"
 +++
 
-Inżynier i praktyk bezpieczeństwa. Interesuję się prywatnością, suwerennością cyfrową, FOSS oraz tym, jak technologie działają w praktyce – nie tylko jak są przedstawiane przez ich twórców.
+Inżynier i praktyk bezpieczeństwa. Interesuję się prywatnością, suwerennością cyfrową, FOSS oraz praktycznym zastosowaniem technologii.
 
-Wierzę w weryfikację zamiast domyślnego zaufania. Nie interesują mnie puste deklaracje, marketingowe obietnice ani technologie przyjmowane bezkrytycznie. Wolę samodzielnie sprawdzić, przetestować i wyciągnąć wnioski.
-
-Moje podejście dobrze oddaje motto:
+Wierzę w weryfikację zamiast domyślnego zaufania. Wolę samodzielnie sprawdzić, przetestować i wyciągnąć wnioski, niż polegać na deklaracjach producentów.
 
 > Zdrowy brak zaufania nie jest paranoją — jest rozsądkiem.
 
 ## Środowisko pracy
 
-Cały blog, kod i konfigurację tworzę w 100% na smartfonie z GrapheneOS. To nie eksperyment ani demonstracja możliwości. To moje codzienne środowisko pracy.
+Blog, kod i konfigurację tworzę w całości na smartfonie z GrapheneOS. To moje codzienne środowisko pracy.
 
-## O czym piszę
+## O blogu
 
-Na Eteryu.space publikuję analizy, testy, recenzje i praktyczne rozwiązania związane z prywatnością, bezpieczeństwem i technologiami.
-
-Pokazuję, jak działają narzędzia, jakie dają możliwości i gdzie mają ograniczenia. Dzielę się również własnymi doświadczeniami, oddzielając sprawdzone informacje od osobistych opinii.
-
-Nie piszę dla samej aktywności. Każda publikacja powinna wnosić coś konkretnego – wiedzę, rozwiązanie albo punkt widzenia, który warto samodzielnie zweryfikować.
+Publikuję testy, analizy, recenzje i praktyczne rozwiązania dotyczące prywatności, bezpieczeństwa i technologii. Dzielę się wiedzą oraz własnymi doświadczeniami, pokazując zarówno możliwości, jak i ograniczenia opisywanych rozwiązań.
 
 ## Kontakt
 
