@@ -3,6 +3,9 @@ title = "GrapheneOS po 5 miesiącach: pełna kontrola bez kompromisów?"
 date = 2026-10-20
 description = "Pięć miesięcy temu przeszedłem na GrapheneOS na Pixelu 8. Dziś dzielę się szczerą recenzją z perspektywy codziennego użytkownika."
 
+[taxonomies]
+tags = ["grapheneos", "android", "prywatnosc"]
+
 [extra]
 toc = true
 +++
@@ -47,6 +50,6 @@ Polecam go każdemu, kto chce mieć kontrolę nad swoim urządzeniem z poziomu s
 
 ## Podsumowanie
 
-Po pięciu miesiącach mogę powiedzieć jedno: GrapheneOS dostarczył mi to, czego oczekiwałem, czyli pełną kontrolę, szybkość i bezpieczeństwo bez zbędnego balastu. 
+Po pięciu miesiącach mogę powiedzieć jedno: GrapheneOS dostarczył mi to, czego oczekiwałem, czyli pełną kontrolę, szybkość i bezpieczeństwo bez zbędnego balastu.
 
 Czy wrócę do stockowego Androida? Obecnie nie widzę takiej potrzeby, ale w duchu świadomego zaufania nie zamykam na to drzwi. Moja decyzja mogłaby się zmienić w dwóch przypadkach: gdyby na rynku pojawiło się urządzenie, które mnie prawdziwie zachwyci, a jednocześnie kierunek rozwoju samego Androida stałby się dla mnie akceptowalny i zgodny z moim modelem zagrożeń. Na ten moment ewolucja systemu Google podąża w kierunku, którego nie akceptuję. Póki co, zostaję z GrapheneOS.
