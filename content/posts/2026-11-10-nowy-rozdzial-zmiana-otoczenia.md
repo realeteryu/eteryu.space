@@ -3,8 +3,8 @@ title = "Nowy rozdział: zmiana otoczenia"
 date = 2026-11-10
 description = "Zostawiam za sobą 30 lat życia, redukuję zbędny bagaż i zmieniam otoczenie. Refleksja o nowym starcie, logistyce miast i mobilnym warsztacie pracy."
 
-[extra]
-toc = true
+[taxonomies]
+tags = ["zmiany-zyciowe", "minimalizm", "mobilnosc"]
 +++
 
 Od dłuższego czasu planowaliśmy z żoną przeprowadzkę. Spędziłem na Pomorzu Zachodnim 30 lat, żyłem tam od urodzenia. W końcu nadarzyła się odpowiednia okazja, więc postanowiliśmy zrealizować ten plan. Wsiadłem w pociąg i pokonałem prawie 700 km. Od kilku dni jestem na miejscu.
