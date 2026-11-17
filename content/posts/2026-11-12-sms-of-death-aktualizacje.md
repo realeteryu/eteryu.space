@@ -3,6 +3,9 @@ title = "SMS of Death: dlaczego aktualizacje to nie opcja, a higiena"
 date = 2026-11-12
 description = "Analiza CVE-2026-58882. Jak 8 bajtów wysłanych w wiadomości WAP Push kładzie telefonię w Androidzie i dlaczego starsze wersje systemu zostają bez ochrony."
 
+[taxonomies]
+tags = ["android", "bezpieczenstwo", "podatnosci"]
+
 [extra]
 toc = true
 +++
@@ -17,14 +20,14 @@ Kluczowy problem polega na tym, że te wiadomości są przetwarzane przez system
 
 ## Anatomia błędu: od 8 bajtów do reboot loopa
 
-Podatność tkwi w funkcji `WapPushOverSms.decodeWapPdu()` w Androidzie. Mechanizm jest klasycznym błędem obcięcia liczby całkowitej (numeric truncation error, **CWE-197**)[^2]:
+Podatność tkwi w funkcji `WapPushOverSms.decodeWapPdu()` w Androidzie. Mechanizm jest klasycznym błędem obcięcia liczby całkowitej (numeric truncation error, **CWE-197**) [^2]:
 
-1.  Nagłówek wiadomości WAP Push zawiera 5-bajtową wartość określającą jego długość.
-2.  Android odczytuje tę wartość jako liczbę typu `long` (np. 2 147 483 648).
-3.  Następnie konwertuje ją do mniejszego typu `int` (32-bit), **bez sprawdzenia zakresu**.
-4.  Wartość ulega obcięciu i staje się liczbą ujemną (-2 147 483 648).
-5.  System próbuje zaalokować tablicę o ujemnym rozmiarze, co wywołuje wyjątek `NegativeArraySizeException`.
-6.  Wyjątek nie jest przechwytywany, co powoduje natychmiastowe ubicie procesu `com.android.phone` – czyli usługi odpowiedzialnej za obsługę połączeń.
+1. Nagłówek wiadomości WAP Push zawiera 5-bajtową wartość określającą jego długość.
+2. Android odczytuje tę wartość jako liczbę typu `long` (np. 2 147 483 648).
+3. Następnie konwertuje ją do mniejszego typu `int` (32-bit), **bez sprawdzenia zakresu**.
+4. Wartość ulega obcięciu i staje się liczbą ujemną (-2 147 483 648).
+5. System próbuje zaalokować tablicę o ujemnym rozmiarze, co wywołuje wyjątek `NegativeArraySizeException`.
+6. Wyjątek nie jest przechwytywany, co powoduje natychmiastowe ubicie procesu `com.android.phone` – czyli usługi odpowiedzialnej za obsługę połączeń.
 
 Pojedyncza wiadomość powoduje utratę zasięgu na 1-2 sekundy, dopóki proces nie zostanie zrestartowany. Problem w tym, że operatorzy często ponawiają wysyłkę niepotwierdzonych wiadomości, a Android zapisuje „zatrutą” wiadomość w kolejce oczekujących, którą próbuje przetworzyć przy każdym rozruchu. Według badacza Marka Blaszczyka, około 20 takich wiadomości może trwale unieruchomić urządzenie, zmuszając użytkownika do przywrócenia ustawień fabrycznych[^3].
 
@@ -33,7 +36,7 @@ Pojedyncza wiadomość powoduje utratę zasięgu na 1-2 sekundy, dopóki proces 
 To jest punkt, w którym filozofia **distrust** staje się niezwykle aktualna. Google naprawiło błąd w ramach aktualizacji bezpieczeństwa z października 2026 roku. Poprawka trafiła jednak **wyłącznie do Androida 14, 15, 16 i 17**.
 
 > **Brak ochrony dla starszych urządzeń**
-> 
+>
 > Urządzenia pracujące na Androidzie 12 i 13 – mimo że podatność została na nich z powodzeniem zreprodukowana – **nie otrzymały i najprawdopodobniej nie otrzymają oficjalnej łatki**. Wynika to z cyklu wsparcia: Google oficjalnie zakończyło wsparcie bezpieczeństwa dla tych wersji.
 
 Warto dodać niuans: badacz zgłosił błąd 5 maja 2026 roku, a Google wewnętrznie opracowało poprawkę już 15 czerwca. Trafiła ona jednak do publicznej wiadomości dopiero w październiku, co mogło sprawiać wrażenie, że zgłoszenie zostało zignorowane[^4].
@@ -44,12 +47,12 @@ To doskonały przykład na to, dlaczego „domyślne zaufanie” do systemu oper
 
 Zgodnie z zasadą minimalizacji ryzyka, oto praktyczne wnioski:
 
-*   **Aktualizuj.** Jeśli korzystasz z Androida 14 lub nowszego, upewnij się, że masz zainstalowaną aktualizację bezpieczeństwa z października lub listopada 2026. W wielu przypadkach wymaga to restartu urządzenia.
-*   **Weryfikuj cykl wsparcia przed zakupem.** Kupując telefon, nie patrz tylko na specyfikację. Sprawdź, jak długo producent gwarantuje aktualizacje bezpieczeństwa. Urządzenie bez wsparcia to potencjalna luka, niezależnie od ceny.
-*   **Nie licz na „spokój”.** Fakt, że podatność nie jest obecnie masowo wykorzystywana, nie oznacza, że jest bezpieczna. Kod proof-of-concept jest publicznie dostępny, a bariera wejścia dla atakującego jest zerowa – wystarczy znać numer telefonu ofiary.
+- **Aktualizuj.** Jeśli korzystasz z Androida 14 lub nowszego, upewnij się, że masz zainstalowaną aktualizację bezpieczeństwa z października lub listopada 2026. W wielu przypadkach wymaga to restartu urządzenia.
+- **Weryfikuj cykl wsparcia przed zakupem.** Kupując telefon, nie patrz tylko na specyfikację. Sprawdź, jak długo producent gwarantuje aktualizacje bezpieczeństwa. Urządzenie bez wsparcia to potencjalna luka, niezależnie od ceny.
+- **Nie licz na „spokój”.** Fakt, że podatność nie jest obecnie masowo wykorzystywana, nie oznacza, że jest bezpieczna. Kod proof-of-concept jest publicznie dostępny, a bariera wejścia dla atakującego jest zerowa – wystarczy znać numer telefonu ofiary.
 
 > **Uwaga na fałszywe poczucie bezpieczeństwa**
-> 
+>
 > Jeśli korzystasz z Androida 12 lub 13, wyłączenie WAP Push w ustawieniach aplikacji SMS **nie zapobiega atakowi**. Podatność jest wykorzystywana na niższym poziomie systemu (`com.android.phone`), zanim wiadomość trafi do aplikacji. Jedynym realnym rozwiązaniem jest aktualizacja systemu. W razie wystąpienia pętli restartów pozostaje ręczne usunięcie zablokowanej wiadomości z kolejki (np. przez `ADB`) lub użycie narzędzi pomocniczych, takich jak WapGuard[^5].
 
 ## Podsumowanie
