@@ -101,16 +101,18 @@
     </main>
 
     <footer class="footer">
-        {% for item in config.extra.nav %}
-            {% set item_url = item.url %}
-            {% if item.url is starting_with(pat="@") %}
-                {% set item_url = get_url(path=item.url) %}
-            {% endif %}
-            <a href="{{ item_url }}" class="footer_item">{{ item.name }}</a>
-        {% endfor %}
+        {% if config.extra.footer %}
+            {% for item in config.extra.footer %}
+                {% set item_url = item.url %}
+                {% if item.url is starting_with(pat="@") %}
+                    {% set item_url = get_url(path=item.url) %}
+                {% endif %}
+                <a href="{{ item_url }}" class="footer_item">{{ item.name }}</a>
+            {% endfor %}
+        {% endif %}
         
         <a href="{{ get_url(path='index.xml') }}" class="footer_item">rss</a>
-        <span class="footer_item">&copy; 2026</span>
+        <span class="footer_item">&copy; {{ now() | date(format="%Y") }}</span>
         <small class="footer_copyright">{{ config.extra.footer_text | default(value=config.title) | safe }}</small>
     </footer>
 
