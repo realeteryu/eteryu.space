@@ -3,6 +3,9 @@ title = "AsterMail: obiecująca prywatna poczta z kryptografią post-kwantową"
 date = 2026-10-19
 description = "Testuję nowy projekt AsterMail. Sprawdzam szyfrowanie end-to-end, ochronę przed trackerami, obsługę własnej domeny i oceniam, czy warto się tam przenosić."
 
+[taxonomies]
+tags = ["prywatnosc", "poczta-elektroniczna", "szyfrowanie"]
+
 [extra]
 toc = true
 +++
@@ -23,7 +26,7 @@ Darmowy plan oferuje:
 To wszystko bez karty kredytowej i bez okresu próbnego. Co ważne, szyfrowanie nie jest okrojone w darmowym planie. Działa dokładnie tak samo jak w płatnych subskrypcjach.
 
 > **Warto wiedzieć**
-> 
+>
 > AsterMail to projekt w pełni otwartoźródłowy. Serwery znajdują się w Niemczech, a darmowy plan jest w pełni funkcjonalny od pierwszego dnia.
 
 ## Aliasy i własna domena
@@ -53,5 +56,5 @@ Na wysłane pytania techniczne support odpowiedział tego samego dnia. To pozyty
 AsterMail to projekt otwartoźródłowy z obiecującym zestawem funkcji prywatnościowych już w darmowym planie. Aplikacja działa stabilnie, a mechanizmy ochrony są realne, a nie wyłącznie marketingowe. Kryptografia post-kwantowa i blokowanie zdalnych fontów to cechy, których na próżno szukać u wielu konkurentów.
 
 > **Ostrzeżenie**
-> 
+>
 > Projekt jest młody i wciąż znajduje się we wczesnej fazie rozwoju. Na obecnym etapie **nie polecam przenoszenia całej swojej poczty do tej usługi**. Warto obserwować jego rozwój i testować rozwiązanie równolegle, bez rezygnacji z dotychczasowego dostawcy.
