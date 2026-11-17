@@ -1,28 +1,37 @@
+# site settings
 base_url = "https://eteryu.space/"
 title = "Eteryu.space"
 description = "O prywatności, bezpieczeństwie i technologiach. Testy, analizy i praktyczne rozwiązania z perspektywy codziennego użytkownika."
 
 theme = "kisse"
 
+# build settings
 compile_sass = true
 generate_feeds = true
 feed_filenames = ["index.xml"]
 
+# taxonomies
 taxonomies = [
     { name = "tags" },
 ]
 
+# markdown settings
 [markdown]
 render_emoji = true
 
 [markdown.highlighting]
 theme = "gruvbox-dark-medium"
 
+# theme settings
 [extra]
 author = "Eteryu"
 avatar = "https://avatars.githubusercontent.com/u/117126022?s=400&u=6d6363ad30ba498f53133c6712a8a75455b6aad6&v=4"
 footer_text = "motyw <a href='https://github.com/realeteryu/zola-kisse'>kisse</a> dla <a href='https://www.getzola.org'>zola</a>"
 
+# homepage limit posts
+number_of_posts = 5
+
+# navigation menu
 [[extra.nav]]
 name = "start"
 url = "@/_index.md"
