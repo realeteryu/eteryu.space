@@ -3,6 +3,9 @@ title = "Ewolucja Zero Trust: od korporacyjnej architektury do filozofii codzien
 date = 2026-11-04
 description = "Termin Zero Trust budzi skrajne emocje. Pokazuję, jak ewoluował od korporacyjnego żargonu do filozofii, którą możesz wdrożyć w codziennym życiu."
 
+[taxonomies]
+tags = ["zero-trust", "bezpieczenstwo", "higiena-cyfrowa"]
+
 [extra]
 toc = true
 +++
