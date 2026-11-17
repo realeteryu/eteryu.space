@@ -3,6 +3,9 @@ title = "Mój własny DNS. Bez własnego serwera, bez logów."
 date = 2026-10-12
 description = "Zbudowałem własny resolver DNS-over-HTTPS na Cloudflare Workers, który blokuje reklamy, trackery, malware i phishing. Bez panelu, bez historii zapytań, z własnym pipeline’em czyszczenia list."
 
+[taxonomies]
+tags = ["dns", "prywatnosc", "cloudflare"]
+
 [extra]
 toc = true
 +++
@@ -27,6 +30,7 @@ Cały proces wygląda prosto:
 Blokuję reklamy, trackery, telemetrię, domeny malware i phishing. Korzystam z kilku starannie wybranych źródeł. Część skupia się na reklamach i trackerach (OISD, HaGeZi, 1Hosts, Easyprivacy), a inne dostarczają wiedzy o zagrożeniach oraz polskim internecie (phishing-filter, Dandelion Sprout, urlhaus, KADhosts, MajkiIT).
 
 > **Pierwsza warstwa**
+>
 > To działa na poziomie DNS. Nie blokuje reklam w YouTube ani elementów wewnątrz strony. Do tego potrzebny jest osobny content blocker w przeglądarce. Resolver jest tylko (i aż) pierwszą warstwą ochrony.
 
 ## Jak łączę listy i usuwam duplikaty
@@ -48,13 +52,14 @@ Po aglomeracji i przejściu przez `allowlist.txt` powstają dwa pliki wyjściowe
 Efekt ostatniego przebiegu:
 
 | Etap | Liczba wpisów |
-| :--- | :--- |
+| :--- | ---: |
 | Surowych linii z wszystkich źródeł | **493 754** |
 | Po deduplikacji | **355 972** |
 | **Po aglomeracji (gotowa lista)** | **307 314** |
 | *Usunięto redundantnych subdomen* | *48 658* |
 
 > **Automatyzacja i wydajność**
+>
 > Ten proces dzieje się raz dziennie. Lista sama się aktualizuje, sama czyści i sama trafia do Cloudflare KV. Worker jest maksymalnie odchudzony — nie traci milisekund CPU na ponowne przetwarzanie tekstu, skoro Python zrobił to już za niego. Gdy KV zawiedzie, Worker pobiera listę awaryjnie z GitHuba. Jeśli oba źródła zawiodą, przepuszcza ruch bez filtracji, ale nadal utrzymuje szyfrowany tunel DoH.
 
 ## Dlaczego to nie ma panelu ani statystyk?
@@ -64,6 +69,7 @@ Mój resolver nie ma panelu administracyjnego. Nie ma wykresów, nie ma listy os
 To celowa decyzja. Panel ze statystykami oznacza, że ktoś — nawet tylko ja — gdzieś te dane przechowuje. Lista ostatnich zapytań to nic innego jak historia tego, co robię w internecie. A ja nie chcę, żeby taka historia istniała w jakiejkolwiek formie.
 
 > **Zero-Logs po stronie aplikacji**
+>
 > Worker przetwarza zapytanie, zwraca odpowiedź i zapomina. Nie zapisuje niczego i nie analizuje. Nie ma czego nie logować, bo nie ma gdzie logować. To nie znaczy, że „nikt nic nie widzi” — Cloudflare jako platforma może widzieć metadane na poziomie edge/konta, a mój upstream widzi zapytania, których nie zablokowałem. Różnica polega na tym, że **ja nie buduję historii moich zapytań**.
 
 ## Dla kogo to jest
