@@ -2,6 +2,17 @@
 
 @import url("https://fonts.bunny.net/css?family=roboto:400,700&display=swap");
 
+/* Global text selection matching original Klisé */
+::selection {
+    background-color: #dfd874;
+    color: #111111;
+}
+
+::-moz-selection {
+    background-color: #dfd874;
+    color: #111111;
+}
+
 $sans-family: 'Roboto', sans-serif;
 $mono-family: 'Consolas', monospace;
 $base-font-size: 16px;
