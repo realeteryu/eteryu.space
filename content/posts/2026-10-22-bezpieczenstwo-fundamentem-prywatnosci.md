@@ -3,6 +3,9 @@ title = "Bezpieczeństwo fundamentem prywatności. Dlaczego kolejność ma znacz
 date = 2026-10-22
 description = "Prywatność bez bezpieczeństwa to iluzja. Wyjaśniam, dlaczego bezpieczeństwo jest warunkiem wstępnym prywatności i jak przełożyć to na codzienne decyzje."
 
+[taxonomies]
+tags = ["bezpieczenstwo", "prywatnosc", "higiena-cyfrowa"]
+
 [extra]
 toc = true
 +++
@@ -24,7 +27,7 @@ Możesz ukrywać swoje IP, używać zaszyfrowanych komunikatorów i unikać korp
 Wyobraź sobie, że rezygnujesz z ochrony przed phishingiem, aby ukryć adres IP przed dostawcą wyszukiwarki. Wszystko wydaje się w porządku, dopóki nie trafisz na spreparowaną stronę, która przejmie Twoje hasła. Hakerzy dostaną dostęp do Twojej skrzynki mailowej, zdjęć i konta bankowego. Twoja prywatność przestaje istnieć nie dlatego, że ktoś ją „sprzedał”, ale dlatego, że straciłeś nad nią kontrolę w wyniku ataku.
 
 > **Fałszywe poczucie bezpieczeństwa**
-> 
+>
 > Narzędzia do prywatności (VPN, menedżery haseł, szyfrowane komunikatory) nie zastąpią podstawowej higieny bezpieczeństwa. Jeśli klikniesz w złośliwy link, żaden szyfrowany tunel nie uchroni Twoich danych przed kradzieżą. Bezpieczeństwo to warstwa, która chroni samą prywatność.
 
 Eksperci są zgodni. Bezpieczeństwo jest koniecznym wymogiem dla prywatności, ale nie wystarczającym. Innymi słowy, bezpieczeństwo nie daje Ci pełnej prywatności, ale bez niego nie masz żadnej.
@@ -39,7 +42,7 @@ Fundament bezpieczeństwa opiera się na kilku filarach.
 4. **Higiena cyfrowa.** Unikalne hasła, uwierzytelnianie dwuskładnikowe, regularne kopie zapasowe. To podstawy, które chronią przed utratą kontroli.
 
 > **Zero Trust w praktyce**
-> 
+>
 > Zero Trust nie jest produktem, który można kupić. To filozofia ciągłej weryfikacji: nie ufasz domyślnym ustawieniom, tylko sprawdzasz, jak działa architektura, jakie dane są zbierane i czy dostawca spełnia obietnice. Dotyczy to zarówno usług, jak i Twoich własnych nawyków.
 
 Dopiero gdy te filary stoją stabilnie, możesz zacząć myśleć o prywatności. Wtedy wiesz, że Twoje dane są bezpieczne, a Ty decydujesz, komu i w jakim zakresie je powierzasz.
