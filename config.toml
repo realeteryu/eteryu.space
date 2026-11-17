@@ -43,3 +43,8 @@ url = "@/posts/_index.md"
 [[extra.nav]]
 name = "o mnie"
 url = "@/about/_index.md"
+
+# footer links
+[[extra.footer]]
+name = "manifest"
+url = "https://distrust.pl"
