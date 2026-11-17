@@ -3,6 +3,9 @@ title = "Mniej znaczy więcej. Powrót do korzeni i zmiana instancji"
 date = 2026-11-03
 description = "Koniec z budowaniem wielkiego huba. Wracam do bloga, manifestu i katalogu narzędzi. Wyjaśniam, dlaczego podjąłem tę decyzję."
 
+[taxonomies]
+tags = ["blog", "minimalizm", "mastodon"]
+
 [extra]
 toc = true
 +++
