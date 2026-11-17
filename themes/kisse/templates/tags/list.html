@@ -5,11 +5,11 @@
 {% block main %}
 <div class="page-content">
     <div class="archive-header">
-        <h1 class="header-title center">Tags.</h1>
+        <h1 class="header-title center">Tagi.</h1>
     </div>
 
     <div class="archive-tags">
-        <a class="tag-item" href="#">all</a>
+        <a class="tag-item" href="#">wszystkie</a>
         {% for term in terms %}
             <a class="tag-item" href="#{{ term.name | slugify }}">{{ term.name }}</a>
         {% endfor %}
