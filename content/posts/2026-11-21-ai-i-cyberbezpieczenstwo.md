@@ -2,8 +2,12 @@
 title = "AI i cyberbezpieczeństwo. Jak zmieniają się zagrożenia i jak się chronić?"
 date = 2026-11-21
 description = "Jak sztuczna inteligencja zmienia cyberprzestępczość, co potrafią już agenci AI i jak chronić swoje konta, smartfon oraz dane?"
+
 [taxonomies]
 tags = ["AI", "cyberbezpieczeństwo", "bezpieczeństwo", "prywatność"]
+
+[extra]
+toc = true
 +++
 
 Sztuczna inteligencja coraz częściej pojawia się w kontekście cyberbezpieczeństwa. Pomaga tworzyć wiarygodne wiadomości phishingowe, generować obrazy i głosy, analizować podatności oprogramowania, a nawet automatyzować kolejne etapy działań ofensywnych. Nie oznacza to jednak, że cyberprzestępczość zaczęła się od AI albo że każdy atak jest dziś przeprowadzany przez autonomicznego agenta.
