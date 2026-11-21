@@ -2,8 +2,12 @@
 title = "Quad9 – dziewięć lat walki o bezpieczniejszy i bardziej prywatny internet"
 date = 2026-11-17
 description = "Dziewięć lat Quad9: historia projektu, DNS Threat Intelligence, prywatność, warianty resolverów, DNSSEC i spór o blokowanie domen we Francji."
+
 [taxonomies]
 tags = ["DNS", "bezpieczeństwo", "prywatność", "Quad9"]
+
+[extra]
+toc = true
 +++
 
 Dziewiątka jest dla Quad9 czymś więcej niż częścią nazwy. To również adres, pod którym działa najbardziej rozpoznawalny wariant usługi: `9.9.9.9`. W listopadzie 2026 roku mija dziewięć lat od uruchomienia publicznego resolvera DNS, którego celem było połączenie ochrony przed zagrożeniami internetowymi z poszanowaniem prywatności użytkowników.
