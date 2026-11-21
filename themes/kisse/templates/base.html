@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    
+
     <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
 
     <link rel="icon" type="image/png" href="{{ get_url(path='favicon-96x96.png') }}" sizes="96x96">
@@ -19,6 +19,15 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ config.base_url }}">
     <meta property="og:image" content="{{ get_url(path='web-app-manifest-512x512.png') }}">
+
+    <!-- GoatCounter analytics -->
+    {% if config.extra.goatcounter %}
+    <script
+        data-goatcounter="{{ config.extra.goatcounter }}"
+        async
+        src="https://gc.zgo.at/count.js">
+    </script>
+    {% endif %}
 </head>
 <body>
     <script>
@@ -65,23 +74,23 @@
             <div class="trigger">
                 {% for item in config.extra.nav %}
                     {% set item_url = item.url %}
-                    
+
                     {% if item.url is starting_with(pat="@") %}
                         {% set item_url = get_url(path=item.url) %}
                     {% endif %}
-                    
+
                     {% set item_path = item_url | replace(from=config.base_url, to="") %}
                     {% if item_path == "" %}
                         {% set item_path = "/" %}
                     {% endif %}
-                    
+
                     {% set is_active = false %}
                     {% if c_path == item_path %}
                         {% set is_active = true %}
                     {% elif item_path != "/" and c_path is starting_with(pat=item_path) %}
                         {% set is_active = true %}
                     {% endif %}
-                    
+
                     <a href="{{ item_url }}" class="menu-link {% if is_active %}active{% endif %}">{{ item.name }}</a>
                 {% endfor %}
 
@@ -112,11 +121,11 @@
                 <a href="{{ item_url }}" class="footer_item">{{ item.name }}</a>
             {% endfor %}
         {% endif %}
-        
+
         {% if config.generate_feeds %}
         <a href="{{ get_url(path='index.xml') }}" class="footer_item">rss</a>
         {% endif %}
-        
+
         <span class="footer_item">&copy; {{ now() | date(format="%Y") }}</span>
         <small class="footer_copyright">{{ config.extra.footer_text | default(value=config.title) | safe }}</small>
     </footer>
@@ -126,7 +135,7 @@
             const element = document.body;
             const currentTheme = element.getAttribute('data-theme');
             let newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
+
             element.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
         });
@@ -134,7 +143,7 @@
         document.getElementById('menu-trigger').addEventListener('change', function() {
             const wrapper = document.querySelector('.wrapper');
             const footer = document.querySelector('.footer');
-            
+
             if (this.checked) {
                 wrapper.classList.add('blurry');
                 if (footer) footer.classList.add('blurry');
